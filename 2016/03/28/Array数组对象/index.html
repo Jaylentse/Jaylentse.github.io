@@ -67,7 +67,7 @@ new Array()是一个Object对象，它的prototype指向Object.prototype`
 <meta property="og:description" content="Array对象Array其实是一个Function类型对象，它的prototype指向Function.prototype
 new Array()是一个Object对象，它的prototype指向Object.prototype`
 1.length属性（可设置）设置length123var colors = [&amp;quot;red&amp;quot;, &amp;quot;blue&amp;quot;,  &amp;quot;gr">
-<meta property="og:updated_time" content="2016-03-27T17:44:50.000Z">
+<meta property="og:updated_time" content="2016-03-27T17:46:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Array数组对象">
 <meta name="twitter:description" content="Array对象Array其实是一个Function类型对象，它的prototype指向Function.prototype
@@ -329,11 +329,11 @@ shift()
 <h3 id="splice-起始，删，添-【改变原数组】"><a href="#splice-起始，删，添-【改变原数组】" class="headerlink" title="splice(起始，删，添)【改变原数组】"></a>splice(起始，删，添)【改变原数组】</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/*删、添*/</span><br><span class="line">/*</span><br><span class="line">**splice()始终会返回一个数组</span><br><span class="line">**该数组包含从原始数组中删除的项</span><br><span class="line">*/</span><br><span class="line">var arr = [1, 2, 3, 4];</span><br><span class="line">var rm = arr.splice(10, 2, &quot;aaa&quot;);</span><br><span class="line">console.log(arr);	//[1, 2, 3, 4, &quot;aaa&quot;];</span><br><span class="line">console.log(rm);	//[]</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">**若起始位大于arr.length-1，起始位为arr.length-1</span><br><span class="line">**且删除项为0</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
 <h2 id="7-位置方法（ES5）【IE9-】"><a href="#7-位置方法（ES5）【IE9-】" class="headerlink" title="7.位置方法（ES5）【IE9+】"></a>7.位置方法（ES5）【IE9+】</h2><h3 id="indexOf-查找项，起始位置"><a href="#indexOf-查找项，起始位置" class="headerlink" title="indexOf(查找项，起始位置)"></a>indexOf(查找项，起始位置)</h3><h3 id="lastIndexOf-查找项-起始位置"><a href="#lastIndexOf-查找项-起始位置" class="headerlink" title="lastIndexOf(查找项, 起始位置)"></a>lastIndexOf(查找项, 起始位置)</h3><h2 id="8-迭代方法（ES5）【IE9-】"><a href="#8-迭代方法（ES5）【IE9-】" class="headerlink" title="8.迭代方法（ES5）【IE9+】"></a>8.迭代方法（ES5）【IE9+】</h2><p><em>接受两个参数第一个参数为function(item, index, array){}</em></p>
 <ul>
-<li>every() <code>对于数组中每一项运行给定函数如果每一项都返回true，则返回true</code></li>
-<li>fliter() <code>对于数组中每一项运行给定函数返回该函数会返回true的项组成的数组</code></li>
-<li>foreach() <code>对于数组中每一项运行给定函数这个方法无返回值</code></li>
-<li>map() <code>对于数组中每一项运行给定函数返回每次函数调用结果组成的数组</code></li>
-<li>some() <code>对于数组中每一项运行给定函数如果任意一项返回true，则返回true</code></li>
+<li>every() <strong><em><code>对于数组中每一项运行给定函数如果每一项都返回true，则返回true</code></em></strong></li>
+<li>fliter() <strong><em><code>对于数组中每一项运行给定函数返回该函数会返回true的项组成的数组</code></em></strong></li>
+<li>foreach() <strong><em><code>对于数组中每一项运行给定函数这个方法无返回值</code></em></strong></li>
+<li>map() <strong><em><code>对于数组中每一项运行给定函数返回每次函数调用结果组成的数组</code></em></strong></li>
+<li>some() <strong><em><code>对于数组中每一项运行给定函数如果任意一项返回true，则返回true</code></em></strong></li>
 </ul>
 <h2 id="9-归并方法"><a href="#9-归并方法" class="headerlink" title="9.归并方法"></a>9.归并方法</h2><ul>
 <li>reduce()</li>
