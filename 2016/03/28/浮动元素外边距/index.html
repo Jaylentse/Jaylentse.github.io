@@ -1,0 +1,807 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="个人," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）
+      2.浮动元素外边距对正常流元素无影响">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浮动元素外边距表现详解">
+<meta property="og:url" content="http://jaylentse.github.io/2016/03/28/浮动元素外边距/index.html">
+<meta property="og:site_name" content="小鸡冷前端课堂">
+<meta property="og:description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）
+      2.浮动元素外边距对正常流元素无影响">
+<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt4.png">
+<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt2.png">
+<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt5.png">
+<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt6.png">
+<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt7.png">
+<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt2.png">
+<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt3.png">
+<meta property="og:image" content="http://jaylentse.github.io/article-images/mgl1.png">
+<meta property="og:image" content="http://jaylentse.github.io/article-images/mgl2.png">
+<meta property="og:image" content="http://jaylentse.github.io/article-images/mgl3.png">
+<meta property="og:image" content="http://jaylentse.github.io/article-images/mgr1.png">
+<meta property="og:image" content="http://jaylentse.github.io/article-images/mgr2.png">
+<meta property="og:image" content="http://jaylentse.github.io/article-images/mgr3.png">
+<meta property="og:updated_time" content="2016-03-28T07:40:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="浮动元素外边距表现详解">
+<meta name="twitter:description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）
+      2.浮动元素外边距对正常流元素无影响">
+<meta name="twitter:image" content="http://jaylentse.github.io/article-images/mgt4.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 浮动元素外边距表现详解 | 小鸡冷前端课堂 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">小鸡冷前端课堂</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">开讲了</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                浮动元素外边距表现详解
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-28T10:45:09+08:00" content="2016-03-28">
+              2016-03-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/28/浮动元素外边距/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/28/浮动元素外边距/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <pre><code>注意：1.浮动元素外边距不合并 （水平垂直都不合并）
+      2.浮动元素外边距对正常流元素无影响 
+</code></pre><a id="more"></a>
+<h2 id="1-垂直外边距"><a href="#1-垂直外边距" class="headerlink" title="1.垂直外边距"></a>1.垂直外边距</h2><h3 id="nbsp-nbsp-1-1-margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】"><a href="#nbsp-nbsp-1-1-margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】" class="headerlink" title="&nbsp;&nbsp;1.1 margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】"></a>&nbsp;&nbsp;1.1 margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】</h3><h4 id="nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值</h4><p><img src="/article-images/mgt4.png" alt="浮动元素margin-top设置为正值,影响自身并带动垂直方向下面的元素" title="浮动元素margin-top设置为正值,影响自身并带动垂直方向下面的元素"></p>
+<h4 id="nbsp-nbsp-nbsp-nbsp-1-1-2-设置为负值"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-2-设置为负值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.2 设置为负值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.2 设置为负值</h4><p><img src="/article-images/mgt2.png" alt="黄色盒子设置margin-top负值，使黄色盒子往上拉并与上面绿色的盒子重叠" title="黄色盒子设置margin-top负值，使黄色盒子往上拉并与上面绿色的盒子重叠"><br><img src="/article-images/mgt5.png" alt="绿色盒子设置margin-top负值，使绿色盒子往上拉，并超出父盒子" title="绿色盒子设置margin-top负值，使绿色盒子往上拉，并超出父盒子"><br><img src="/article-images/mgt6.png" alt="继续减小绿色盒子的margin-top,使其完全超出父盒子，黄色盒子最顶智能紧贴父盒子上边缘，不会超出父盒子" title="继续减小绿色盒子的margin-top,使其完全超出父盒子 &lt;br /&gt; 黄色盒子最顶只会紧贴父盒子上边缘，不会跟着跑出去"></p>
+<h3 id="nbsp-nbsp-1-2-margin-bottom【影响垂直方向下面元素的位置-对自己位置无影响】"><a href="#nbsp-nbsp-1-2-margin-bottom【影响垂直方向下面元素的位置-对自己位置无影响】" class="headerlink" title="&nbsp;&nbsp;1.2 margin-bottom【影响垂直方向下面元素的位置,对自己位置无影响】"></a>&nbsp;&nbsp;1.2 margin-bottom【影响垂直方向下面元素的位置,对自己位置无影响】</h3><h4 id="nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值-1"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值-1" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值</h4><p><img src="/article-images/mgt7.png" alt="绿色盒子设置margin-bottom正值，会把在其下面的黄色盒子往下挤" title="绿色盒子设置margin-bottom正值，会把在其下面的黄色盒子往下挤"></p>
+<h4 id="nbsp-nbsp-nbsp-nbsp-1-1-1-设置为负值"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为负值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为负值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为负值</h4><p><img src="/article-images/mgt2.png" alt="绿色盒子设置margin-bottom负值，会把黄色盒子往上拉，并使黄色盒子与自己重叠" title="绿色盒子设置margin-bottom负值，会把黄色盒子往上拉 &lt;br /&gt; 并使黄色盒子与自己重叠"><br><img src="/article-images/mgt3.png" alt="继续减少绿色盒子margin-bottom值，可发现黄色盒子最高被拉至父盒子上内边界，黄色盒子不会超出父盒子" title="继续减少绿色盒子margin-bottom值，可发现黄色盒子最高被拉至父盒子上内边界 &lt;br /&gt; 黄色盒子不会超出父盒子"></p>
+<h2 id="2-水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】"><a href="#2-水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】" class="headerlink" title="2.水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】"></a>2.水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】</h2><h4 id="nbsp-nbsp-2-1-元素左浮动，设置margin-left"><a href="#nbsp-nbsp-2-1-元素左浮动，设置margin-left" class="headerlink" title="&nbsp;&nbsp;2.1 元素左浮动，设置margin-left"></a>&nbsp;&nbsp;2.1 元素左浮动，设置margin-left</h4><h4 id="nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left正值"><a href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left正值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-left正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-left正值</h4><p><img src="/article-images/mgl1.png" alt="自身带动右边左浮动元素往右边跑" title="自身并带动右边左浮动元素往右边跑"></p>
+<h4 id="nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left负值"><a href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left负值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-left负值"></a>&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-left负值</h4><p><img src="/article-images/mgl2.png" alt="使自身往左跑，并超出父盒子" title="使自身往左跑，并超出父盒子"><br><img src="/article-images/mgl3.png" alt="继续减小绿色盒子左外边距，直至绿色盒子完全跑出父盒子，而蓝色盒子做多顶在父盒子左内边界，并不会跟着跑出去" title="继续减小绿色盒子左外边距，直至绿色盒子完全跑出父盒子 &lt;br /&gt; 而蓝色盒子做多顶在父盒子左内边界，并不会跟着跑出去"></p>
+<h4 id="nbsp-nbsp-2-1-元素左浮动，设置margin-right"><a href="#nbsp-nbsp-2-1-元素左浮动，设置margin-right" class="headerlink" title="&nbsp;&nbsp;2.1 元素左浮动，设置margin-right"></a>&nbsp;&nbsp;2.1 元素左浮动，设置margin-right</h4><h4 id="nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right正值"><a href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right正值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-right正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-right正值</h4><p><img src="/article-images/mgr1.png" alt="设置margin-right正值会把其右边左浮动元素往右推" title="设置margin-right正值会把其右边左浮动元素往右推"></p>
+<h4 id="nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right负值"><a href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right负值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-right负值"></a>&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-right负值</h4><p><img src="/article-images/mgr2.png" alt="将其右边左浮动元素往左边拉，并覆盖自己" title="将其右边左浮动元素往左边拉，并覆盖自己"><br><img src="/article-images/mgr3.png" alt="继续减少绿色盒子右外边距，直至蓝色盒子贴着父元素左内边界，此时再减少绿色盒子右外边距，蓝色盒子不会再往左边跑" title="继续减少绿色盒子右外边距，直至蓝色盒子贴着父元素左内边界 &lt;br /&gt; 此时再减少绿色盒子右外边距，蓝色盒子不会再往左边跑"></p>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li><strong><em>margin-top影响自身位置，设置负值会把自己往上拉</em></strong></li>
+<li><strong><em>margin-bottom只影响元素下面的元素而不影响自身位置，正值往下推，负值往上拉（会使下面的元素覆盖自己），自身位置不变，垂直边距不合并</em></strong></li>
+<li><strong><em>对于左浮动的元素margin-left影响自身，设置负值会把自己往左边拉</em></strong></li>
+<li><strong><em>对于左浮动的元素margin-right会影响在其右边左浮动元素，对自身位置无影响，正值往右推，负值往左拉（会使右边的元素覆盖自己）</em></strong></li>
+<li><strong><em>对于右浮动的元素margin-right影响自身，设置负值会把自己往右边拉</em></strong></li>
+<li><strong><em>对于右浮动的元素margin-left会影响在其左边右浮动元素，对自身位置无影响，正值往左推，负值往右拉（会使左边的元素覆盖自己）</em></strong></li>
+<li><strong><em>自身设置可以影响自身的负外边距可以使自己从父元素盒子里跑出去，而设置可以影响兄弟元素的负边距无法使兄弟元素离开父元素盒子</em></strong></li>
+<li><strong><em>水平外边距过大会把在同一行的浮动元素挤到下一行</em></strong></li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/个人/" rel="tag">#个人</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/28/Array数组对象/" rel="next" title="Array数组对象">
+                <i class="fa fa-chevron-left"></i> Array数组对象
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/28/浮动元素外边距/"
+           data-title="浮动元素外边距表现详解" data-url="http://jaylentse.github.io/2016/03/28/浮动元素外边距/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Jaylen Tse" />
+          <p class="site-author-name" itemprop="name">Jaylen Tse</p>
+          <p class="site-description motion-element" itemprop="description">励志成为一名优秀的前端工程师</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Jaylentse" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1911179195/home?wvr=5" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-垂直外边距"><span class="nav-number">1.</span> <span class="nav-text">1.垂直外边距</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nbsp-nbsp-1-1-margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】"><span class="nav-number">1.1.</span> <span class="nav-text">  1.1 margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值"><span class="nav-number">1.1.1.</span> <span class="nav-text">    1.1.1 设置为正值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-1-1-2-设置为负值"><span class="nav-number">1.1.2.</span> <span class="nav-text">    1.1.2 设置为负值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nbsp-nbsp-1-2-margin-bottom【影响垂直方向下面元素的位置-对自己位置无影响】"><span class="nav-number">1.2.</span> <span class="nav-text">  1.2 margin-bottom【影响垂直方向下面元素的位置,对自己位置无影响】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">    1.1.1 设置为正值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为负值"><span class="nav-number">1.2.2.</span> <span class="nav-text">    1.1.1 设置为负值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】"><span class="nav-number">2.</span> <span class="nav-text">2.水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-2-1-元素左浮动，设置margin-left"><span class="nav-number">2.0.1.</span> <span class="nav-text">  2.1 元素左浮动，设置margin-left</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left正值"><span class="nav-number">2.0.2.</span> <span class="nav-text">    2.1.1 设置margin-left正值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left负值"><span class="nav-number">2.0.3.</span> <span class="nav-text">    2.1.1 设置margin-left负值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-2-1-元素左浮动，设置margin-right"><span class="nav-number">2.0.4.</span> <span class="nav-text">  2.1 元素左浮动，设置margin-right</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right正值"><span class="nav-number">2.0.5.</span> <span class="nav-text">    2.1.1 设置margin-right正值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right负值"><span class="nav-number">2.0.6.</span> <span class="nav-text">    2.1.1 设置margin-right负值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jaylen Tse</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jaylen"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+</body>
+</html>

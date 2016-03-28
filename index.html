@@ -226,6 +226,125 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/28/浮动元素外边距/" itemprop="url">
+                  浮动元素外边距表现详解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-28T10:45:09+08:00" content="2016-03-28">
+              2016-03-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/28/浮动元素外边距/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/28/浮动元素外边距/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <pre><code>注意：1.浮动元素外边距不合并 （水平垂直都不合并）
+      2.浮动元素外边距对正常流元素无影响 
+</code></pre>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/28/浮动元素外边距/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/28/Array数组对象/" itemprop="url">
                   Array数组对象
                 </a>
@@ -256,6 +375,18 @@
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/javascript/" itemprop="url" rel="index">
                     <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
                   </a>
                 </span>
 
@@ -294,7 +425,7 @@
 
       
         
-          <h1 id="Array对象"><a href="#Array对象" class="headerlink" title="Array对象"></a>Array对象</h1><pre><code>Array其实是一个Function类型对象，它的prototype指向Function.prototype
+          <pre><code>Array其实是一个Function类型对象，它的prototype指向Function.prototype
 new Array()是一个Object对象，它的prototype指向Object.prototype
 </code></pre>
           <div class="post-more-link text-center">
@@ -413,10 +544,7 @@ new Array()是一个Object对象，它的prototype指向Object.prototype
 
       
         
-          <h1 style="text-align: center">html全局属性</h1>
-
-
-<h4 id="1-aceesskey属性"><a href="#1-aceesskey属性" class="headerlink" title="1.aceesskey属性"></a>1.<code>aceesskey</code>属性</h4><p>使用accesskey属性可以设定一个或几个用来选择页面上的元素的快捷键<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Example<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	  <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">	    Name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">accesskey</span>=<span class="string">"n"</span> /&gt;</span> </span><br><span class="line">		//windows下为Alt+n</span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">		Password:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">accesskey</span>=<span class="string">"p"</span> /&gt;</span></span><br><span class="line">		//windows下为Alt+p</span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"log in"</span> <span class="attr">acesskey</span>=<span class="string">"s"</span> /&gt;</span></span><br><span class="line">		//windows下为Alt+s</span><br><span class="line">	  <span class="tag">&lt;/<span class="name">form</span>&gt;</span>	</span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+          <h4 id="1-aceesskey属性"><a href="#1-aceesskey属性" class="headerlink" title="1.aceesskey属性"></a>1.<code>aceesskey</code>属性</h4><p>使用accesskey属性可以设定一个或几个用来选择页面上的元素的快捷键<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Example<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	  <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">	    Name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">accesskey</span>=<span class="string">"n"</span> /&gt;</span> </span><br><span class="line">		//windows下为Alt+n</span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">		Password:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">accesskey</span>=<span class="string">"p"</span> /&gt;</span></span><br><span class="line">		//windows下为Alt+p</span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"log in"</span> <span class="attr">acesskey</span>=<span class="string">"s"</span> /&gt;</span></span><br><span class="line">		//windows下为Alt+s</span><br><span class="line">	  <span class="tag">&lt;/<span class="name">form</span>&gt;</span>	</span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/03/27/html全局属性/#more" rel="contents">
               阅读全文 &raquo;
@@ -485,7 +613,7 @@ new Array()是一个Object对象，它的prototype指向Object.prototype
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -493,7 +621,7 @@ new Array()是一个Object对象，它的prototype指向Object.prototype
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -502,7 +630,7 @@ new Array()是一个Object对象，它的prototype指向Object.prototype
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
