@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="个人心得," />
+  <meta name="keywords" content="翻译练习,Dash," />
 
 
 
@@ -57,33 +57,25 @@
 
 
 
-<meta name="description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）
-      2.浮动元素外边距对正常流元素无影响">
+<meta name="description" content="Creates a JavaScript Date instance that represents a single moment in time. 
+Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
+
+创建一个代表某一时刻时间的j">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浮动元素外边距表现详解">
-<meta property="og:url" content="http://jaylentse.github.io/2016/03/28/浮动元素外边距/index.html">
+<meta property="og:title" content="date对象详解【翻译自Dash javascript文档】">
+<meta property="og:url" content="http://jaylentse.github.io/2016/03/29/date对象详解/index.html">
 <meta property="og:site_name" content="小鸡冷前端课堂">
-<meta property="og:description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）
-      2.浮动元素外边距对正常流元素无影响">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt4.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt2.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt5.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt6.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt7.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt2.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt3.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgl1.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgl2.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgl3.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgr1.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgr2.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgr3.png">
-<meta property="og:updated_time" content="2016-03-28T09:33:28.000Z">
+<meta property="og:description" content="Creates a JavaScript Date instance that represents a single moment in time. 
+Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
+
+创建一个代表某一时刻时间的j">
+<meta property="og:updated_time" content="2016-03-29T03:40:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浮动元素外边距表现详解">
-<meta name="twitter:description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）
-      2.浮动元素外边距对正常流元素无影响">
-<meta name="twitter:image" content="http://jaylentse.github.io/article-images/mgt4.png">
+<meta name="twitter:title" content="date对象详解【翻译自Dash javascript文档】">
+<meta name="twitter:description" content="Creates a JavaScript Date instance that represents a single moment in time. 
+Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
+
+创建一个代表某一时刻时间的j">
 
 
 
@@ -101,7 +93,7 @@
   };
 </script>
 
-  <title> 浮动元素外边距表现详解 | 小鸡冷前端课堂 </title>
+  <title> date对象详解【翻译自Dash javascript文档】 | 小鸡冷前端课堂 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -241,7 +233,7 @@
             
             
               
-                浮动元素外边距表现详解
+                date对象详解【翻译自Dash javascript文档】
               
             
           </h1>
@@ -253,8 +245,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-28T10:45:09+08:00" content="2016-03-28">
-              2016-03-28
+            <time itemprop="dateCreated" datetime="2016-03-29T09:51:06+08:00" content="2016-03-29">
+              2016-03-29
             </time>
           </span>
 
@@ -267,8 +259,44 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/css/" itemprop="url" rel="index">
-                    <span itemprop="name">css</span>
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/js内置对象/" itemprop="url" rel="index">
+                    <span itemprop="name">js内置对象</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/js内置对象/翻译练习/" itemprop="url" rel="index">
+                    <span itemprop="name">翻译练习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/js内置对象/翻译练习/Dash/" itemprop="url" rel="index">
+                    <span itemprop="name">Dash</span>
                   </a>
                 </span>
 
@@ -283,8 +311,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/28/浮动元素外边距/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/28/浮动元素外边距/" itemprop="commentsCount"></span>
+                <a href="/2016/03/29/date对象详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/29/date对象详解/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,28 +334,70 @@
       
 
       
-        <pre><code>注意：1.浮动元素外边距不合并 （水平垂直都不合并）
-      2.浮动元素外边距对正常流元素无影响 
-</code></pre><a id="more"></a>
-<h2 id="1-垂直外边距"><a href="#1-垂直外边距" class="headerlink" title="1.垂直外边距"></a>1.垂直外边距</h2><h3 id="nbsp-nbsp-1-1-margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】"><a href="#nbsp-nbsp-1-1-margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】" class="headerlink" title="&nbsp;&nbsp;1.1 margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】"></a>&nbsp;&nbsp;1.1 margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】</h3><h4 id="nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值</h4><p><img src="/article-images/mgt4.png" alt="浮动元素margin-top设置为正值,影响自身并带动垂直方向下面的元素" title="浮动元素margin-top设置为正值,影响自身并带动垂直方向下面的元素"></p>
-<h4 id="nbsp-nbsp-nbsp-nbsp-1-1-2-设置为负值"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-2-设置为负值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.2 设置为负值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.2 设置为负值</h4><p><img src="/article-images/mgt2.png" alt="黄色盒子设置margin-top负值，使黄色盒子往上拉并与上面绿色的盒子重叠" title="黄色盒子设置margin-top负值，使黄色盒子往上拉并与上面绿色的盒子重叠"><br><img src="/article-images/mgt5.png" alt="绿色盒子设置margin-top负值，使绿色盒子往上拉，并超出父盒子" title="绿色盒子设置margin-top负值，使绿色盒子往上拉，并超出父盒子"><br><img src="/article-images/mgt6.png" alt="继续减小绿色盒子的margin-top,使其完全超出父盒子，黄色盒子最顶智能紧贴父盒子上边缘，不会超出父盒子" title="继续减小绿色盒子的margin-top,使其完全超出父盒子 &lt;br /&gt; 黄色盒子最顶只会紧贴父盒子上边缘，不会跟着跑出去"></p>
-<h3 id="nbsp-nbsp-1-2-margin-bottom【影响垂直方向下面元素的位置-对自己位置无影响】"><a href="#nbsp-nbsp-1-2-margin-bottom【影响垂直方向下面元素的位置-对自己位置无影响】" class="headerlink" title="&nbsp;&nbsp;1.2 margin-bottom【影响垂直方向下面元素的位置,对自己位置无影响】"></a>&nbsp;&nbsp;1.2 margin-bottom【影响垂直方向下面元素的位置,对自己位置无影响】</h3><h4 id="nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值-1"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值-1" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值</h4><p><img src="/article-images/mgt7.png" alt="绿色盒子设置margin-bottom正值，会把在其下面的黄色盒子往下挤" title="绿色盒子设置margin-bottom正值，会把在其下面的黄色盒子往下挤"></p>
-<h4 id="nbsp-nbsp-nbsp-nbsp-1-1-1-设置为负值"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为负值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为负值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为负值</h4><p><img src="/article-images/mgt2.png" alt="绿色盒子设置margin-bottom负值，会把黄色盒子往上拉，并使黄色盒子与自己重叠" title="绿色盒子设置margin-bottom负值，会把黄色盒子往上拉 &lt;br /&gt; 并使黄色盒子与自己重叠"><br><img src="/article-images/mgt3.png" alt="继续减少绿色盒子margin-bottom值，可发现黄色盒子最高被拉至父盒子上内边界，黄色盒子不会超出父盒子" title="继续减少绿色盒子margin-bottom值，可发现黄色盒子最高被拉至父盒子上内边界 &lt;br /&gt; 黄色盒子不会超出父盒子"></p>
-<h2 id="2-水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】"><a href="#2-水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】" class="headerlink" title="2.水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】"></a>2.水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】</h2><h4 id="nbsp-nbsp-2-1-元素左浮动，设置margin-left"><a href="#nbsp-nbsp-2-1-元素左浮动，设置margin-left" class="headerlink" title="&nbsp;&nbsp;2.1 元素左浮动，设置margin-left"></a>&nbsp;&nbsp;2.1 元素左浮动，设置margin-left</h4><h4 id="nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left正值"><a href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left正值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-left正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-left正值</h4><p><img src="/article-images/mgl1.png" alt="自身带动右边左浮动元素往右边跑" title="自身并带动右边左浮动元素往右边跑"></p>
-<h4 id="nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left负值"><a href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left负值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-left负值"></a>&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-left负值</h4><p><img src="/article-images/mgl2.png" alt="使自身往左跑，并超出父盒子" title="使自身往左跑，并超出父盒子"><br><img src="/article-images/mgl3.png" alt="继续减小绿色盒子左外边距，直至绿色盒子完全跑出父盒子，而蓝色盒子做多顶在父盒子左内边界，并不会跟着跑出去" title="继续减小绿色盒子左外边距，直至绿色盒子完全跑出父盒子 &lt;br /&gt; 而蓝色盒子做多顶在父盒子左内边界，并不会跟着跑出去"></p>
-<h4 id="nbsp-nbsp-2-1-元素左浮动，设置margin-right"><a href="#nbsp-nbsp-2-1-元素左浮动，设置margin-right" class="headerlink" title="&nbsp;&nbsp;2.1 元素左浮动，设置margin-right"></a>&nbsp;&nbsp;2.1 元素左浮动，设置margin-right</h4><h4 id="nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right正值"><a href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right正值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-right正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-right正值</h4><p><img src="/article-images/mgr1.png" alt="设置margin-right正值会把其右边左浮动元素往右推" title="设置margin-right正值会把其右边左浮动元素往右推"></p>
-<h4 id="nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right负值"><a href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right负值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-right负值"></a>&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-right负值</h4><p><img src="/article-images/mgr2.png" alt="将其右边左浮动元素往左边拉，并覆盖自己" title="将其右边左浮动元素往左边拉，并覆盖自己"><br><img src="/article-images/mgr3.png" alt="继续减少绿色盒子右外边距，直至蓝色盒子贴着父元素左内边界，此时再减少绿色盒子右外边距，蓝色盒子不会再往左边跑" title="继续减少绿色盒子右外边距，直至蓝色盒子贴着父元素左内边界 &lt;br /&gt; 此时再减少绿色盒子右外边距，蓝色盒子不会再往左边跑"></p>
-<hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
-<li><strong><em>margin-top影响自身位置，设置负值会把自己往上拉</em></strong></li>
-<li><strong><em>margin-bottom只影响元素下面的元素而不影响自身位置，正值往下推，负值往上拉（会使下面的元素覆盖自己），自身位置不变，垂直边距不合并</em></strong></li>
-<li><strong><em>对于左浮动的元素margin-left影响自身，设置负值会把自己往左边拉</em></strong></li>
-<li><strong><em>对于左浮动的元素margin-right会影响在其右边左浮动元素，对自身位置无影响，正值往右推，负值往左拉（会使右边的元素覆盖自己）</em></strong></li>
-<li><strong><em>对于右浮动的元素margin-right影响自身，设置负值会把自己往右边拉</em></strong></li>
-<li><strong><em>对于右浮动的元素margin-left会影响在其左边右浮动元素，对自身位置无影响，正值往左推，负值往右拉（会使左边的元素覆盖自己）</em></strong></li>
-<li><strong><em>自身设置可以影响自身的负外边距可以使自己从父元素盒子里跑出去，而设置可以影响兄弟元素的负边距无法使兄弟元素离开父元素盒子</em></strong></li>
-<li><strong><em>水平外边距过大会把在同一行的浮动元素挤到下一行</em></strong></li>
-</ol>
+        <pre><code>Creates a JavaScript Date instance that represents a single moment in time. 
+Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
+
+创建一个代表某一时刻时间的js Date对象，
+Date对象时间是相对于1970年7月1日（世界统一时）的毫秒数
+</code></pre> <a id="more"></a>   
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'December 17, 1995 03:24:00'</span>);</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'1995-12-17T03:24:00'</span>);</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1995</span>, <span class="number">11</span>, <span class="number">17</span>);</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1995</span>, <span class="number">11</span>, <span class="number">17</span>, <span class="number">3</span>, <span class="number">24</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> unixTimestamp = <span class="built_in">Date</span>.now(); <span class="comment">// in milliseconds</span></span><br></pre></td></tr></table></figure>
+<h2 id="Syntax-‘sɪntaeks-【语法】"><a href="#Syntax-‘sɪntaeks-【语法】" class="headerlink" title="Syntax [‘sɪntæks]【语法】"></a>Syntax [‘sɪntæks]【语法】</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(value);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(dateString);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);</span><br></pre></td></tr></table></figure>
+<p><strong><em><code>Note: JavaScript Date objects can only be instantiated by calling JavaScript Date as a constructor: calling it as a regular function (i.e. without the new operator) will return a string rather than a Date object;      unlike other JavaScript object types, JavaScript Date objects have no literal syntax.</code></em></strong></p>
+<p><strong><em><code>注意：JS Date对象实例只能以Date对象作为构造函数创建：如果通过Date静态方法（也就是没有new关键字）创建date实例则会返回一个字符串而不是一个Date对象；与其他JS对象不同的是，Date对象没有字面量语法</code></em></strong></p>
+<h2 id="Parameters-pə’raemətɚ-【参数】"><a href="#Parameters-pə’raemətɚ-【参数】" class="headerlink" title="Parameters [pə’ræmətɚ]【参数】"></a>Parameters [pə’ræmətɚ]【参数】</h2><p><strong><em><code>Note: Where Date is called as a constructor with more than one argument, if values are greater than their logical range (e.g. 13 is provided as the month value or 70 for the minute value), the adjacent value will be adjusted. E.g. new Date(2013, 13, 1) is equivalent to new Date(2014, 1, 1), both create a date for 2014-02-01 (note that the month is 0-based). Similarly for other values: new Date(2013, 2, 1, 0, 70) is equivalent to new Date(2013, 2, 1, 1, 10) which both create a date for 2013-03-01T01:10:00.</code></em></strong></p>
+<p><strong><em><code>注意： 当Date对象作为构造函数被传入多个参数，若传入的值大于合理的范围（比如 月份中传入13或者分钟中传入70）,则上一级时间的值会被调整。例如 new Date(2013, 13, 1)相当于 new Date(2014, 1, 1)，都是创建了一个指向2014年2月1号的日期对象（注意月份是从0开始的）。类似地，new Date(2013, 2, 1, 0, 70)和Date(2013, 2, 1, 1, 10)一样都创建了一个date对象指向2013年3月1号1点10分</code></em></strong></p>
+<h3 id="1-Value-基本数值"><a href="#1-Value-基本数值" class="headerlink" title="1.Value 基本数值"></a>1.Value 基本数值</h3><ul>
+<li><p>Integer value representing the number of milliseconds since 1 January 1970 00:00:00 UTC (Unix Epoch).</p>
+</li>
+<li><p>一个相对于1970年1月1日0时的毫秒数（整数）</p>
+<h3 id="2-dateString-时间字符串"><a href="#2-dateString-时间字符串" class="headerlink" title="2.dateString 时间字符串"></a>2.dateString 时间字符串</h3></li>
+<li><p>String value representing a date. The string should be in a format recognized by the Date.parse() method (IETF-compliant RFC 2822 timestamps and also a version of ISO8601).</p>
+</li>
+<li><p>一个可以被Date.parse()方法解析的时间字符串（要符合原文后面那一串标准）</p>
+</li>
+</ul>
+<h3 id="3-year"><a href="#3-year" class="headerlink" title="3.year"></a>3.year</h3><ul>
+<li><p>Integer value representing the year. Values from 0 to 99 map to the years 1900 to 1999.</p>
+</li>
+<li><p>一个代表年份的整数，0-99对应1900年到1999年</p>
+</li>
+</ul>
+<h3 id="4-month"><a href="#4-month" class="headerlink" title="4.month"></a>4.month</h3><ul>
+<li><p>Integer value representing the month, beginning with 0 for January to 11 for December.</p>
+</li>
+<li><p>一个代表月份的整数，取值范围为0（1月份）至11（12月）</p>
+</li>
+</ul>
+<h3 id="5-day"><a href="#5-day" class="headerlink" title="5.day"></a>5.day</h3><ul>
+<li><p>Optional. Integer value representing the day of the month. </p>
+</li>
+<li><p>可选项，一个代表日期的整数</p>
+</li>
+</ul>
+<h3 id="6-hour"><a href="#6-hour" class="headerlink" title="6.hour"></a>6.hour</h3><ul>
+<li><p>Optional. Integer value representing the hour of the day.</p>
+</li>
+<li><p>可选项，一个代表小时数的整数</p>
+</li>
+</ul>
+<h3 id="7-minute"><a href="#7-minute" class="headerlink" title="7.minute"></a>7.minute</h3><ul>
+<li><p>Optional. Integer value representing the minute segment of a time.</p>
+</li>
+<li><p>可选项，一个代表分钟数的整数</p>
+</li>
+</ul>
+<h3 id="8-second"><a href="#8-second" class="headerlink" title="8.second"></a>8.second</h3><ul>
+<li><p>Optional. Integer value representing the second segment of a time.</p>
+</li>
+<li><p>可选项，一个代表秒数的整数</p>
+</li>
+</ul>
+<h3 id="9-millisecond"><a href="#9-millisecond" class="headerlink" title="9.millisecond"></a>9.millisecond</h3><ul>
+<li><p>Optional. Integer value representing the millisecond segment of a time.</p>
+</li>
+<li><p>可选项，一个代表毫秒数的整数</p>
+</li>
+</ul>
 
       
     </div>
@@ -342,7 +412,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/个人心得/" rel="tag">#个人心得</a>
+            <a href="/tags/翻译练习/" rel="tag">#翻译练习</a>
+          
+            <a href="/tags/Dash/" rel="tag">#Dash</a>
           
         </div>
       
@@ -351,17 +423,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/28/Array数组对象/" rel="next" title="Array数组对象">
-                <i class="fa fa-chevron-left"></i> Array数组对象
+              <a href="/2016/03/28/CSS颜色关键词【妈妈再也不用担心我词汇量不够啦】/" rel="next" title="CSS颜色关键词【妈妈再也不用担心我词汇量不够啦】">
+                <i class="fa fa-chevron-left"></i> CSS颜色关键词【妈妈再也不用担心我词汇量不够啦】
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/28/CSS颜色关键词【妈妈再也不用担心我词汇量不够啦】/" rel="prev" title="CSS颜色关键词【妈妈再也不用担心我词汇量不够啦】">
-                CSS颜色关键词【妈妈再也不用担心我词汇量不够啦】 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -387,8 +455,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/28/浮动元素外边距/"
-           data-title="浮动元素外边距表现详解" data-url="http://jaylentse.github.io/2016/03/28/浮动元素外边距/">
+      <div class="ds-thread" data-thread-key="2016/03/29/date对象详解/"
+           data-title="date对象详解【翻译自Dash javascript文档】" data-url="http://jaylentse.github.io/2016/03/29/date对象详解/">
       </div>
     
   </div>
@@ -502,7 +570,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-垂直外边距"><span class="nav-number">1.</span> <span class="nav-text">1.垂直外边距</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nbsp-nbsp-1-1-margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】"><span class="nav-number">1.1.</span> <span class="nav-text">  1.1 margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值"><span class="nav-number">1.1.1.</span> <span class="nav-text">    1.1.1 设置为正值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-1-1-2-设置为负值"><span class="nav-number">1.1.2.</span> <span class="nav-text">    1.1.2 设置为负值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nbsp-nbsp-1-2-margin-bottom【影响垂直方向下面元素的位置-对自己位置无影响】"><span class="nav-number">1.2.</span> <span class="nav-text">  1.2 margin-bottom【影响垂直方向下面元素的位置,对自己位置无影响】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">    1.1.1 设置为正值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为负值"><span class="nav-number">1.2.2.</span> <span class="nav-text">    1.1.1 设置为负值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】"><span class="nav-number">2.</span> <span class="nav-text">2.水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-2-1-元素左浮动，设置margin-left"><span class="nav-number">2.0.1.</span> <span class="nav-text">  2.1 元素左浮动，设置margin-left</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left正值"><span class="nav-number">2.0.2.</span> <span class="nav-text">    2.1.1 设置margin-left正值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left负值"><span class="nav-number">2.0.3.</span> <span class="nav-text">    2.1.1 设置margin-left负值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-2-1-元素左浮动，设置margin-right"><span class="nav-number">2.0.4.</span> <span class="nav-text">  2.1 元素左浮动，设置margin-right</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right正值"><span class="nav-number">2.0.5.</span> <span class="nav-text">    2.1.1 设置margin-right正值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right负值"><span class="nav-number">2.0.6.</span> <span class="nav-text">    2.1.1 设置margin-right负值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Syntax-‘sɪntaeks-【语法】"><span class="nav-number">1.</span> <span class="nav-text">Syntax [‘sɪntæks]【语法】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Parameters-pə’raemətɚ-【参数】"><span class="nav-number">2.</span> <span class="nav-text">Parameters [pə’ræmətɚ]【参数】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Value-基本数值"><span class="nav-number">2.1.</span> <span class="nav-text">1.Value 基本数值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-dateString-时间字符串"><span class="nav-number">2.2.</span> <span class="nav-text">2.dateString 时间字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-year"><span class="nav-number">2.3.</span> <span class="nav-text">3.year</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-month"><span class="nav-number">2.4.</span> <span class="nav-text">4.month</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-day"><span class="nav-number">2.5.</span> <span class="nav-text">5.day</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-hour"><span class="nav-number">2.6.</span> <span class="nav-text">6.hour</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-minute"><span class="nav-number">2.7.</span> <span class="nav-text">7.minute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-second"><span class="nav-number">2.8.</span> <span class="nav-text">8.second</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-millisecond"><span class="nav-number">2.9.</span> <span class="nav-text">9.millisecond</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
