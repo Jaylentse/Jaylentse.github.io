@@ -69,7 +69,7 @@ Date objects are based on a time value that is the number of milliseconds since 
 Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
 
 创建一个代表某一时刻时间的j">
-<meta property="og:updated_time" content="2016-03-29T03:43:22.000Z">
+<meta property="og:updated_time" content="2016-03-29T05:10:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="date对象详解【翻译自Dash javascript文档】">
 <meta name="twitter:description" content="Creates a JavaScript Date instance that represents a single moment in time. 
@@ -343,9 +343,9 @@ Date对象时间是相对于1970年7月1日（世界统一时）的毫秒数
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'December 17, 1995 03:24:00'</span>);</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'1995-12-17T03:24:00'</span>);</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1995</span>, <span class="number">11</span>, <span class="number">17</span>);</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1995</span>, <span class="number">11</span>, <span class="number">17</span>, <span class="number">3</span>, <span class="number">24</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> unixTimestamp = <span class="built_in">Date</span>.now(); <span class="comment">// in milliseconds</span></span><br></pre></td></tr></table></figure>
 <h2 id="Syntax-‘sɪntaeks-【语法】"><a href="#Syntax-‘sɪntaeks-【语法】" class="headerlink" title="Syntax [‘sɪntæks]【语法】"></a>Syntax [‘sɪntæks]【语法】</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(value);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(dateString);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);</span><br></pre></td></tr></table></figure>
 <p><strong><em><code>Note: JavaScript Date objects can only be instantiated by calling JavaScript Date as a constructor: calling it as a regular function (i.e. without the new operator) will return a string rather than a Date object;      unlike other JavaScript object types, JavaScript Date objects have no literal syntax.</code></em></strong></p>
-<p><strong><em><code>注意：JS Date对象实例只能以Date对象作为构造函数创建：如果通过Date静态方法（也就是没有new关键字）创建date实例则会返回一个字符串而不是一个Date对象；与其他JS对象不同的是，Date对象没有字面量语法</code></em></strong></p>
+<p><strong><em><code>注意：JS Date对象实例只能以Date对象作为构造函数创建：如果将Date当做一个普通的函数（也就是没有new关键字）创建date实例则会返回一个字符串而不是一个Date对象；与其他JS对象不同的是，Date对象没有字面量语法</code></em></strong></p>
 <h2 id="Parameters-pə’raemətɚ-【参数】"><a href="#Parameters-pə’raemətɚ-【参数】" class="headerlink" title="Parameters [pə’ræmətɚ]【参数】"></a>Parameters [pə’ræmətɚ]【参数】</h2><p><strong><em><code>Note: Where Date is called as a constructor with more than one argument, if values are greater than their logical range (e.g. 13 is provided as the month value or 70 for the minute value), the adjacent value will be adjusted. E.g. new Date(2013, 13, 1) is equivalent to new Date(2014, 1, 1), both create a date for 2014-02-01 (note that the month is 0-based). Similarly for other values: new Date(2013, 2, 1, 0, 70) is equivalent to new Date(2013, 2, 1, 1, 10) which both create a date for 2013-03-01T01:10:00.</code></em></strong></p>
-<p><strong><em><code>注意： 当Date对象作为构造函数被传入多个参数，若传入的值大于合理的范围（比如 月份中传入13或者分钟中传入70）,则上一级时间的值会被调整。例如 new Date(2013, 13, 1)相当于 new Date(2014, 1, 1)，都是创建了一个指向2014年2月1号的日期对象（注意月份是从0开始的）。类似地，new Date(2013, 2, 1, 0, 70)和Date(2013, 2, 1, 1, 10)一样都创建了一个date对象指向2013年3月1号1点10分</code></em></strong></p>
+<p><strong><em><code>注意： 当Date对象作为构造函数被传入多个参数，若传入的值超出合理的范围（比如 月份中传入13或者分钟中传入70）,则上一级时间的值会被调整。例如 new Date(2013, 13, 1)相当于 new Date(2014, 1, 1)，都是创建了一个指向2014年2月1号的日期对象（注意月份是从0开始的）。类似地，new Date(2013, 2, 1, 0, 70)和Date(2013, 2, 1, 1, 10)一样都创建了一个date对象指向2013年3月1号1点10分</code></em></strong></p>
 <h3 id="1-Value-基本数值"><a href="#1-Value-基本数值" class="headerlink" title="1.Value 基本数值"></a>1.Value 基本数值</h3><ul>
 <li><p>Integer value representing the number of milliseconds since 1 January 1970 00:00:00 UTC (Unix Epoch).</p>
 </li>
@@ -400,9 +400,43 @@ Date对象时间是相对于1970年7月1日（世界统一时）的毫秒数
 <li><p>可选项，一个代表毫秒数的整数</p>
 </li>
 </ul>
+<h3 id="Description-【描述】"><a href="#Description-【描述】" class="headerlink" title="Description 【描述】"></a>Description 【描述】</h3><ul>
+<li><p>If no arguments are provided, the constructor creates a JavaScript Date object for the current date and time according to system settings.</p>
+</li>
+<li><p>如果不传入任何参数,则创建一个date对象指向当前系统时间</p>
+</li>
+<li><p>If at least two arguments are supplied, missing arguments are either set to 1 (if day is missing) or 0 for all others.</p>
+</li>
+<li><p>如果传入了至少两个参数，则缺少的参数会被默认设置为1（如果缺少日期）或 0（除了日期的其他参数）</p>
+</li>
+<li><p>The JavaScript date is based on a time value that is milliseconds since midnight 01 January, 1970 UTC. A day holds 86,400,000 milliseconds. The JavaScript Date object range is -100,000,000 days to 100,000,000 days relative to 01 January, 1970 UTC.</p>
+</li>
+<li><p>js date对象时间相对于1970年1月1号半夜0时，一天有八千六百四十万毫秒，js date对象日期范围为1970年1月1号0点前后1亿天</p>
+</li>
+<li><p>The JavaScript Date object provides uniform behavior across platforms. The time value can be passed between systems to represent the same moment in time and if used to create a local date object, will reflect the local equivalent of the time.</p>
+</li>
+<li><p>js date对象对跨平台提供统一的处理方式，（妈的后面看不懂）</p>
+</li>
+<li><p>The JavaScript Date object supports a number of UTC (universal) methods, as well as local time methods. UTC, also known as Greenwich Mean Time (GMT), refers to the time as set by the World Time Standard. The local time is the time known to the computer where JavaScript is executed.</p>
+</li>
+<li><p>js Date对象提供了一系列UTC（世界协调时、世界统一时间）方法和本地时间方法。UTC（世界统一时），也可以理解为格林威治标准时间，提供全球时间参考标准。本地时间指的是js执行环境的机器时间</p>
+</li>
+<li><p>Invoking JavaScript Date as a function (i.e., without the new operator) will return a string representing the current date and time.</p>
+</li>
+<li><p>若将Date对象当做一个普通的函数执行（没有new操作符）将会返回一个当前日期和时间的字符串</p>
+</li>
+</ul>
+<h2 id="Properties-【属性】"><a href="#Properties-【属性】" class="headerlink" title="Properties 【属性】"></a>Properties 【属性】</h2><ul>
+<li><p>Date.prototype</p>
+<pre><code>Allows the addition of properties to a JavaScript Date object.
+可以向js date对象添加额外属性
+</code></pre></li>
+<li><p>Date.length</p>
+<pre><code>The value of Date.length is 7. This is the number of arguments handled by the constructor.
+</code></pre></li>
+</ul>
 <p><br><br><br><br><br></p>
-<p>##未完待续…</p>
-
+<h2 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…"></a>未完待续…</h2>
       
     </div>
 
@@ -574,7 +608,7 @@ Date对象时间是相对于1970年7月1日（世界统一时）的毫秒数
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Syntax-‘sɪntaeks-【语法】"><span class="nav-number">1.</span> <span class="nav-text">Syntax [‘sɪntæks]【语法】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Parameters-pə’raemətɚ-【参数】"><span class="nav-number">2.</span> <span class="nav-text">Parameters [pə’ræmətɚ]【参数】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Value-基本数值"><span class="nav-number">2.1.</span> <span class="nav-text">1.Value 基本数值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-dateString-时间字符串"><span class="nav-number">2.2.</span> <span class="nav-text">2.dateString 时间字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-year"><span class="nav-number">2.3.</span> <span class="nav-text">3.year</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-month"><span class="nav-number">2.4.</span> <span class="nav-text">4.month</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-day"><span class="nav-number">2.5.</span> <span class="nav-text">5.day</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-hour"><span class="nav-number">2.6.</span> <span class="nav-text">6.hour</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-minute"><span class="nav-number">2.7.</span> <span class="nav-text">7.minute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-second"><span class="nav-number">2.8.</span> <span class="nav-text">8.second</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-millisecond"><span class="nav-number">2.9.</span> <span class="nav-text">9.millisecond</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Syntax-‘sɪntaeks-【语法】"><span class="nav-number">1.</span> <span class="nav-text">Syntax [‘sɪntæks]【语法】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Parameters-pə’raemətɚ-【参数】"><span class="nav-number">2.</span> <span class="nav-text">Parameters [pə’ræmətɚ]【参数】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Value-基本数值"><span class="nav-number">2.1.</span> <span class="nav-text">1.Value 基本数值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-dateString-时间字符串"><span class="nav-number">2.2.</span> <span class="nav-text">2.dateString 时间字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-year"><span class="nav-number">2.3.</span> <span class="nav-text">3.year</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-month"><span class="nav-number">2.4.</span> <span class="nav-text">4.month</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-day"><span class="nav-number">2.5.</span> <span class="nav-text">5.day</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-hour"><span class="nav-number">2.6.</span> <span class="nav-text">6.hour</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-minute"><span class="nav-number">2.7.</span> <span class="nav-text">7.minute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-second"><span class="nav-number">2.8.</span> <span class="nav-text">8.second</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-millisecond"><span class="nav-number">2.9.</span> <span class="nav-text">9.millisecond</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Description-【描述】"><span class="nav-number">2.10.</span> <span class="nav-text">Description 【描述】</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Properties-【属性】"><span class="nav-number">3.</span> <span class="nav-text">Properties 【属性】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未完待续…"><span class="nav-number">4.</span> <span class="nav-text">未完待续…</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
