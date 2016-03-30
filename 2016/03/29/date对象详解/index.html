@@ -69,7 +69,7 @@ Date objects are based on a time value that is the number of milliseconds since 
 Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
 
 创建一个代表某一时刻时间的j">
-<meta property="og:updated_time" content="2016-03-29T15:57:27.000Z">
+<meta property="og:updated_time" content="2016-03-30T01:17:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="date对象详解【翻译自Dash javascript文档】">
 <meta name="twitter:description" content="Creates a JavaScript Date instance that represents a single moment in time. 
@@ -461,13 +461,206 @@ Date.length的值为7，这个值指的是date处理的参数的个数
 <p>接受与构造函数一样的参数（2至7个）并返回该日期距1970年1月1日0点的毫秒数</p>
 <h2 id="JavaScript-Date-instances【js-Date对象实例】"><a href="#JavaScript-Date-instances【js-Date对象实例】" class="headerlink" title="JavaScript Date instances【js Date对象实例】"></a>JavaScript Date instances【js Date对象实例】</h2><p>All Date instances inherit from Date.prototype. The prototype object of the Date constructor can be modified to affect all Date instances.</p>
 <p>所有Date实例都继承自Date.peototype(所有实例共享)，修改Date对象的原型对象上的方法和属性可以应用到所有Date实例上</p>
-<h3 id="Date-prototype-Methods-【定义在Date-prototype方法】"><a href="#Date-prototype-Methods-【定义在Date-prototype方法】" class="headerlink" title="Date.prototype Methods 【定义在Date.prototype方法】"></a>Date.prototype Methods 【定义在Date.prototype方法】</h3><p><code>Getter(获取)</code></p>
+<h3 id="Date-prototype-Methods-【定义在Date-prototype的方法】"><a href="#Date-prototype-Methods-【定义在Date-prototype的方法】" class="headerlink" title="Date.prototype Methods 【定义在Date.prototype的方法】"></a>Date.prototype Methods 【定义在Date.prototype的方法】</h3><p><code>Getter(获取)</code></p>
 <ul>
 <li>Date.prototype.getDate()</li>
 </ul>
 <p>Returns the day of the month (1-31) for the specified date according to local time.</p>
-<p>返回当前日期（1-31）</p>
+<p>返回指定时间相对于当地时间的当前日期（1-31）</p>
+<ul>
+<li>Date.prototype.getDay()</li>
+</ul>
+<p>Returns the day of the week (0-6) for the specified date according to local time.</p>
+<p>返回指定时间相对于当地时间的当前星期（0-6）</p>
+<ul>
+<li>Date.prototype.getFullYear()</li>
+</ul>
+<p>Returns the year (4 digits for 4-digit years) of the specified date according to local time.</p>
+<p>返回指定时间相对于当地时间的四位数年份</p>
+<ul>
+<li>Date.prototype.getHours()</li>
+</ul>
+<p>Returns the hour (0-23) in the specified date according to local time.</p>
+<p>返回指定时间相对于当地时间的小时数</p>
+<ul>
+<li>Date.prototype.getMilliseconds()</li>
+</ul>
+<p>Returns the milliseconds (0-999) in the specified date according to local time.</p>
+<p>返回指定时间相对于当地时间当地时间的毫秒数（0-999）</p>
+<ul>
+<li>Date.prototype.getMinutes()</li>
+</ul>
+<p>Returns the minutes (0-59) in the specified date according to local time.</p>
+<ul>
+<li>Date.prototype.getMonth()</li>
+</ul>
+<p>Returns the month (0-11) in the specified date according to local time.</p>
+<ul>
+<li>Date.prototype.getSeconds()</li>
+</ul>
+<p>Returns the seconds (0-59) in the specified date according to local time.</p>
+<ul>
+<li>Date.prototype.getTime()</li>
+</ul>
+<p>Returns the numeric value of the specified date as the number of milliseconds since January 1, 1970, 00:00:00 UTC (negative for prior times).</p>
+<ul>
+<li>Date.prototype.getTimezoneOffset()</li>
+</ul>
+<p>Returns the time-zone offset in minutes for the current locale.</p>
+<ul>
+<li>Date.prototype.getUTCDate()</li>
+</ul>
+<p>Returns the day (date) of the month (1-31) in the specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.getUTCDay()</li>
+</ul>
+<p>Returns the day of the week (0-6) in the specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.getUTCFullYear()</li>
+</ul>
+<p>Returns the year (4 digits for 4-digit years) in the specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.getUTCHours()</li>
+</ul>
+<p>Returns the hours (0-23) in the specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.getUTCMilliseconds()</li>
+</ul>
+<p>Returns the milliseconds (0-999) in the specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.getUTCMinutes()</li>
+</ul>
+<p>Returns the minutes (0-59) in the specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.getUTCMonth()</li>
+</ul>
+<p>Returns the month (0-11) in the specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.getUTCSeconds()</li>
+</ul>
+<p>Returns the seconds (0-59) in the specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.getYear() </li>
+</ul>
+<p>Returns the year (usually 2-3 digits) in the specified date according to local time. Use getFullYear() instead.</p>
 <p><code>Setter(设置)</code></p>
+<ul>
+<li>Date.prototype.setDate()</li>
+</ul>
+<p>Sets the day of the month for a specified date according to local time.</p>
+<ul>
+<li>Date.prototype.setFullYear()</li>
+</ul>
+<p>Sets the full year (e.g. 4 digits for 4-digit years) for a specified date according to local time.</p>
+<ul>
+<li>Date.prototype.setHours()</li>
+</ul>
+<p>Sets the hours for a specified date according to local time.</p>
+<ul>
+<li>Date.prototype.setMilliseconds()</li>
+</ul>
+<p>Sets the milliseconds for a specified date according to local time.</p>
+<ul>
+<li>Date.prototype.setMinutes()</li>
+</ul>
+<p>Sets the minutes for a specified date according to local time.</p>
+<ul>
+<li>Date.prototype.setMonth()</li>
+</ul>
+<p>Sets the month for a specified date according to local time.</p>
+<ul>
+<li>Date.prototype.setSeconds()</li>
+</ul>
+<p>Sets the seconds for a specified date according to local time.</p>
+<ul>
+<li>Date.prototype.setTime()</li>
+</ul>
+<p>Sets the Date object to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC, allowing for negative numbers for times prior.</p>
+<ul>
+<li>Date.prototype.setUTCDate()</li>
+</ul>
+<p>Sets the day of the month for a specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.setUTCFullYear()</li>
+</ul>
+<p>Sets the full year (e.g. 4 digits for 4-digit years) for a specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.setUTCHours()</li>
+</ul>
+<p>Sets the hour for a specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.setUTCMilliseconds()</li>
+</ul>
+<p>Sets the milliseconds for a specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.setUTCMinutes()</li>
+</ul>
+<p>Sets the minutes for a specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.setUTCMonth()</li>
+</ul>
+<p>Sets the month for a specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.setUTCSeconds()</li>
+</ul>
+<p>Sets the seconds for a specified date according to universal time.</p>
+<ul>
+<li>Date.prototype.setYear() </li>
+</ul>
+<p>Sets the year (usually 2-3 digits) for a specified date according to local time. Use setFullYear() instead.</p>
+<p><code>Conversion getter(转换方法)</code></p>
+<ul>
+<li>Date.prototype.toDateString()</li>
+</ul>
+<p>Returns the “date” portion of the Date as a human-readable string.</p>
+<ul>
+<li>Date.prototype.toISOString()</li>
+</ul>
+<p>Converts a date to a string following the ISO 8601 Extended Format.</p>
+<ul>
+<li>Date.prototype.toJSON()</li>
+</ul>
+<p>Returns a string representing the Date using toISOString(). Intended for use by<br>JSON.stringify().</p>
+<ul>
+<li>Date.prototype.toGMTString() </li>
+</ul>
+<p>Returns a string representing the Date based on the GMT (UT) time zone. Use toUTCString() instead.</p>
+<ul>
+<li>Date.prototype.toLocaleDateString()</li>
+</ul>
+<p>Returns a string with a locality sensitive representation of the date portion of this date based on system settings.</p>
+<ul>
+<li>Date.prototype.toLocaleFormat() </li>
+</ul>
+<p>Converts a date to a string, using a format string.</p>
+<ul>
+<li>Date.prototype.toLocaleString()</li>
+</ul>
+<p>Returns a string with a locality sensitive representation of this date. Overrides the Object.prototype.toLocaleString() method.</p>
+<ul>
+<li>Date.prototype.toLocaleTimeString()</li>
+</ul>
+<p>Returns a string with a locality sensitive representation of the time portion of this date based on system settings.</p>
+<ul>
+<li>Date.prototype.toSource() </li>
+</ul>
+<p>Returns a string representing the source for an equivalent Date object; you can use this value to create a new object. Overrides the Object.prototype.toSource() method.</p>
+<ul>
+<li>Date.prototype.toString()</li>
+</ul>
+<p>Returns a string representing the specified Date object. Overrides the Object.prototype.toString() method.</p>
+<ul>
+<li>Date.prototype.toTimeString()</li>
+</ul>
+<p>Returns the “time” portion of the Date as a human-readable string.</p>
+<ul>
+<li>Date.prototype.toUTCString()</li>
+</ul>
+<p>Converts a date to a string using the UTC timezone.</p>
+<ul>
+<li>Date.prototype.valueOf()</li>
+</ul>
+<p>Returns the primitive value of a Date object. Overrides the Object.prototype.valueOf() method.</p>
 <h2 id="Examples-【栗子】"><a href="#Examples-【栗子】" class="headerlink" title="Examples 【栗子】"></a>Examples 【栗子】</h2><h3 id="1-Several-ways-to-create-a-Date-object【创建Date对象的几种方式】"><a href="#1-Several-ways-to-create-a-Date-object【创建Date对象的几种方式】" class="headerlink" title="1.Several ways to create a Date object【创建Date对象的几种方式】"></a>1.Several ways to create a Date object【创建Date对象的几种方式】</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'December 17, 1995 03:24:00'</span>);</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'1995-12-17T03:24:00'</span>);</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1995</span>, <span class="number">11</span>, <span class="number">17</span>);</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1995</span>, <span class="number">11</span>, <span class="number">17</span>, <span class="number">3</span>, <span class="number">24</span>, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
 <h3 id="2-Two-digit-years-map-to-1900-1999【两位数字年份映射1990年-1999年】"><a href="#2-Two-digit-years-map-to-1900-1999【两位数字年份映射1990年-1999年】" class="headerlink" title="2.Two digit years map to 1900 - 1999【两位数字年份映射1990年-1999年】"></a>2.Two digit years map to 1900 - 1999【两位数字年份映射1990年-1999年】</h3><ul>
 <li><p>In order to create and get dates between the years 0 and 99 the <code>Date.prototype.setFullYear()</code> and <code>Date.prototype.getFullYear()</code> methods should be used.</p>
@@ -667,7 +860,7 @@ Date.length的值为7，这个值指的是date处理的参数的个数
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Syntax-‘sɪntaeks-【语法】"><span class="nav-number">1.</span> <span class="nav-text">Syntax [‘sɪntæks]【语法】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Parameters-pə’raemətɚ-【参数】"><span class="nav-number">2.</span> <span class="nav-text">Parameters [pə’ræmətɚ]【参数】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Value-基本数值"><span class="nav-number">2.1.</span> <span class="nav-text">1.Value 基本数值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-dateString-时间字符串"><span class="nav-number">2.2.</span> <span class="nav-text">2.dateString 时间字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-year"><span class="nav-number">2.3.</span> <span class="nav-text">3.year</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-month"><span class="nav-number">2.4.</span> <span class="nav-text">4.month</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-day"><span class="nav-number">2.5.</span> <span class="nav-text">5.day</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-hour"><span class="nav-number">2.6.</span> <span class="nav-text">6.hour</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-minute"><span class="nav-number">2.7.</span> <span class="nav-text">7.minute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-second"><span class="nav-number">2.8.</span> <span class="nav-text">8.second</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-millisecond"><span class="nav-number">2.9.</span> <span class="nav-text">9.millisecond</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Description-【描述】"><span class="nav-number">2.10.</span> <span class="nav-text">Description 【描述】</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Properties-【属性】"><span class="nav-number">3.</span> <span class="nav-text">Properties 【属性】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Methods【私有方法】"><span class="nav-number">4.</span> <span class="nav-text">Methods【私有方法】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-Date-instances【js-Date对象实例】"><span class="nav-number">5.</span> <span class="nav-text">JavaScript Date instances【js Date对象实例】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Date-prototype-Methods-【定义在Date-prototype方法】"><span class="nav-number">5.1.</span> <span class="nav-text">Date.prototype Methods 【定义在Date.prototype方法】</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Examples-【栗子】"><span class="nav-number">6.</span> <span class="nav-text">Examples 【栗子】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Several-ways-to-create-a-Date-object【创建Date对象的几种方式】"><span class="nav-number">6.1.</span> <span class="nav-text">1.Several ways to create a Date object【创建Date对象的几种方式】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Two-digit-years-map-to-1900-1999【两位数字年份映射1990年-1999年】"><span class="nav-number">6.2.</span> <span class="nav-text">2.Two digit years map to 1900 - 1999【两位数字年份映射1990年-1999年】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Calculating-elapsed-time【计算时间差】"><span class="nav-number">6.3.</span> <span class="nav-text">3.Calculating elapsed time【计算时间差】</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未完待续…"><span class="nav-number">7.</span> <span class="nav-text">未完待续…</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Syntax-‘sɪntaeks-【语法】"><span class="nav-number">1.</span> <span class="nav-text">Syntax [‘sɪntæks]【语法】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Parameters-pə’raemətɚ-【参数】"><span class="nav-number">2.</span> <span class="nav-text">Parameters [pə’ræmətɚ]【参数】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Value-基本数值"><span class="nav-number">2.1.</span> <span class="nav-text">1.Value 基本数值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-dateString-时间字符串"><span class="nav-number">2.2.</span> <span class="nav-text">2.dateString 时间字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-year"><span class="nav-number">2.3.</span> <span class="nav-text">3.year</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-month"><span class="nav-number">2.4.</span> <span class="nav-text">4.month</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-day"><span class="nav-number">2.5.</span> <span class="nav-text">5.day</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-hour"><span class="nav-number">2.6.</span> <span class="nav-text">6.hour</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-minute"><span class="nav-number">2.7.</span> <span class="nav-text">7.minute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-second"><span class="nav-number">2.8.</span> <span class="nav-text">8.second</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-millisecond"><span class="nav-number">2.9.</span> <span class="nav-text">9.millisecond</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Description-【描述】"><span class="nav-number">2.10.</span> <span class="nav-text">Description 【描述】</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Properties-【属性】"><span class="nav-number">3.</span> <span class="nav-text">Properties 【属性】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Methods【私有方法】"><span class="nav-number">4.</span> <span class="nav-text">Methods【私有方法】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-Date-instances【js-Date对象实例】"><span class="nav-number">5.</span> <span class="nav-text">JavaScript Date instances【js Date对象实例】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Date-prototype-Methods-【定义在Date-prototype的方法】"><span class="nav-number">5.1.</span> <span class="nav-text">Date.prototype Methods 【定义在Date.prototype的方法】</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Examples-【栗子】"><span class="nav-number">6.</span> <span class="nav-text">Examples 【栗子】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Several-ways-to-create-a-Date-object【创建Date对象的几种方式】"><span class="nav-number">6.1.</span> <span class="nav-text">1.Several ways to create a Date object【创建Date对象的几种方式】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Two-digit-years-map-to-1900-1999【两位数字年份映射1990年-1999年】"><span class="nav-number">6.2.</span> <span class="nav-text">2.Two digit years map to 1900 - 1999【两位数字年份映射1990年-1999年】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Calculating-elapsed-time【计算时间差】"><span class="nav-number">6.3.</span> <span class="nav-text">3.Calculating elapsed time【计算时间差】</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未完待续…"><span class="nav-number">7.</span> <span class="nav-text">未完待续…</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
