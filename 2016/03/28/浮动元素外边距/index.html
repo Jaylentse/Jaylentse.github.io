@@ -57,14 +57,12 @@
 
 
 
-<meta name="description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）
-      2.浮动元素外边距对正常流元素无影响">
+<meta name="description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）      2.浮动元素外边距对正常流元素无影响">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浮动元素外边距表现详解">
 <meta property="og:url" content="http://jaylentse.github.io/2016/03/28/浮动元素外边距/index.html">
 <meta property="og:site_name" content="小鸡冷前端课堂">
-<meta property="og:description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）
-      2.浮动元素外边距对正常流元素无影响">
+<meta property="og:description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）      2.浮动元素外边距对正常流元素无影响">
 <meta property="og:image" content="http://jaylentse.github.io/article-images/mgt4.png">
 <meta property="og:image" content="http://jaylentse.github.io/article-images/mgt2.png">
 <meta property="og:image" content="http://jaylentse.github.io/article-images/mgt5.png">
@@ -78,11 +76,10 @@
 <meta property="og:image" content="http://jaylentse.github.io/article-images/mgr1.png">
 <meta property="og:image" content="http://jaylentse.github.io/article-images/mgr2.png">
 <meta property="og:image" content="http://jaylentse.github.io/article-images/mgr3.png">
-<meta property="og:updated_time" content="2016-03-28T09:33:28.000Z">
+<meta property="og:updated_time" content="2016-03-30T15:31:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浮动元素外边距表现详解">
-<meta name="twitter:description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）
-      2.浮动元素外边距对正常流元素无影响">
+<meta name="twitter:description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）      2.浮动元素外边距对正常流元素无影响">
 <meta name="twitter:image" content="http://jaylentse.github.io/article-images/mgt4.png">
 
 
@@ -306,9 +303,10 @@
       
 
       
-        <pre><code>注意：1.浮动元素外边距不合并 （水平垂直都不合并）
-      2.浮动元素外边距对正常流元素无影响 
-</code></pre><a id="more"></a>
+        <blockquote>
+<p>注意：1.浮动元素外边距不合并 （水平垂直都不合并）<br>      2.浮动元素外边距对正常流元素无影响 </p>
+</blockquote>
+<a id="more"></a>
 <h2 id="1-垂直外边距"><a href="#1-垂直外边距" class="headerlink" title="1.垂直外边距"></a>1.垂直外边距</h2><h3 id="nbsp-nbsp-1-1-margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】"><a href="#nbsp-nbsp-1-1-margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】" class="headerlink" title="&nbsp;&nbsp;1.1 margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】"></a>&nbsp;&nbsp;1.1 margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】</h3><h4 id="nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值</h4><p><img src="/article-images/mgt4.png" alt="浮动元素margin-top设置为正值,影响自身并带动垂直方向下面的元素" title="浮动元素margin-top设置为正值,影响自身并带动垂直方向下面的元素"></p>
 <h4 id="nbsp-nbsp-nbsp-nbsp-1-1-2-设置为负值"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-2-设置为负值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.2 设置为负值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.2 设置为负值</h4><p><img src="/article-images/mgt2.png" alt="黄色盒子设置margin-top负值，使黄色盒子往上拉并与上面绿色的盒子重叠" title="黄色盒子设置margin-top负值，使黄色盒子往上拉并与上面绿色的盒子重叠"><br><img src="/article-images/mgt5.png" alt="绿色盒子设置margin-top负值，使绿色盒子往上拉，并超出父盒子" title="绿色盒子设置margin-top负值，使绿色盒子往上拉，并超出父盒子"><br><img src="/article-images/mgt6.png" alt="继续减小绿色盒子的margin-top,使其完全超出父盒子，黄色盒子最顶智能紧贴父盒子上边缘，不会超出父盒子" title="继续减小绿色盒子的margin-top,使其完全超出父盒子 &lt;br /&gt; 黄色盒子最顶只会紧贴父盒子上边缘，不会跟着跑出去"></p>
 <h3 id="nbsp-nbsp-1-2-margin-bottom【影响垂直方向下面元素的位置-对自己位置无影响】"><a href="#nbsp-nbsp-1-2-margin-bottom【影响垂直方向下面元素的位置-对自己位置无影响】" class="headerlink" title="&nbsp;&nbsp;1.2 margin-bottom【影响垂直方向下面元素的位置,对自己位置无影响】"></a>&nbsp;&nbsp;1.2 margin-bottom【影响垂直方向下面元素的位置,对自己位置无影响】</h3><h4 id="nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值-1"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值-1" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值</h4><p><img src="/article-images/mgt7.png" alt="绿色盒子设置margin-bottom正值，会把在其下面的黄色盒子往下挤" title="绿色盒子设置margin-bottom正值，会把在其下面的黄色盒子往下挤"></p>
