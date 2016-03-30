@@ -57,19 +57,16 @@
 
 
 
-<meta name="description" content="Array其实是一个Function类型对象，它的prototype指向Function.prototype
-new Array()是一个Object对象，它的prototype指向Object.prototype">
+<meta name="description" content="Array其实是一个Function类型对象，它的prototype指向Function.prototypenew Array()是一个Object对象，它的prototype指向Object.prototype">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Array数组对象">
 <meta property="og:url" content="http://jaylentse.github.io/2016/03/28/Array数组对象/index.html">
 <meta property="og:site_name" content="小鸡冷前端课堂">
-<meta property="og:description" content="Array其实是一个Function类型对象，它的prototype指向Function.prototype
-new Array()是一个Object对象，它的prototype指向Object.prototype">
-<meta property="og:updated_time" content="2016-03-28T09:18:52.000Z">
+<meta property="og:description" content="Array其实是一个Function类型对象，它的prototype指向Function.prototypenew Array()是一个Object对象，它的prototype指向Object.prototype">
+<meta property="og:updated_time" content="2016-03-30T15:26:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Array数组对象">
-<meta name="twitter:description" content="Array其实是一个Function类型对象，它的prototype指向Function.prototype
-new Array()是一个Object对象，它的prototype指向Object.prototype">
+<meta name="twitter:description" content="Array其实是一个Function类型对象，它的prototype指向Function.prototypenew Array()是一个Object对象，它的prototype指向Object.prototype">
 
 
 
@@ -304,9 +301,10 @@ new Array()是一个Object对象，它的prototype指向Object.prototype">
       
 
       
-        <pre><code>Array其实是一个Function类型对象，它的prototype指向Function.prototype
-new Array()是一个Object对象，它的prototype指向Object.prototype
-</code></pre><a id="more"></a>
+        <blockquote>
+<p>Array其实是一个Function类型对象，它的prototype指向Function.prototype<br>new Array()是一个Object对象，它的prototype指向Object.prototype</p>
+</blockquote>
+<a id="more"></a>
 <h2 id="1-length属性（可设置）"><a href="#1-length属性（可设置）" class="headerlink" title="1.length属性（可设置）"></a>1.length属性（可设置）</h2><h3 id="设置length"><a href="#设置length" class="headerlink" title="设置length"></a>设置length</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>,  <span class="string">"green"</span>];</span><br><span class="line">colors.length = <span class="number">2</span>;</span><br><span class="line">alert(colors);	<span class="comment">//["red", "blue"]</span></span><br></pre></td></tr></table></figure>
 <h3 id="利用length属性在数组末尾添加新数项"><a href="#利用length属性在数组末尾添加新数项" class="headerlink" title="利用length属性在数组末尾添加新数项"></a>利用length属性在数组末尾添加新数项</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>,  <span class="string">"green"</span>];</span><br><span class="line">colors[colors.length] =  <span class="string">"black"</span>;	<span class="comment">//在位置3添加一种颜色</span></span><br><span class="line">colors[colors.length] = <span class="string">"brown"</span>;	<span class="comment">//在位置4添加一种颜色</span></span><br></pre></td></tr></table></figure>
 <h2 id="2-检测数组"><a href="#2-检测数组" class="headerlink" title="2.检测数组"></a>2.检测数组</h2><h3 id="ES3"><a href="#ES3" class="headerlink" title="ES3"></a>ES3</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(value <span class="keyword">instanceof</span> <span class="built_in">Array</span>)&#123;</span><br><span class="line">	<span class="comment">//对数组执行某些操作</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line">**若一个页面有两个以上全局作用域</span><br><span class="line">**两个框架的数组分别具有不同的构造函数</span><br><span class="line">*/</span></span><br></pre></td></tr></table></figure>
@@ -477,7 +475,7 @@ shift()
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -485,7 +483,7 @@ shift()
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

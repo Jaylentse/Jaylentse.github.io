@@ -57,25 +57,19 @@
 
 
 
-<meta name="description" content="Creates a JavaScript Date instance that represents a single moment in time. 
-Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
-
-创建一个代表某一时刻时间的j">
+<meta name="description" content="Creates a JavaScript Date instance that represents a single moment in time.Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
+创建一个代表某一时刻时间的js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="date对象详解【翻译自Dash javascript文档】">
 <meta property="og:url" content="http://jaylentse.github.io/2016/03/29/date对象详解/index.html">
 <meta property="og:site_name" content="小鸡冷前端课堂">
-<meta property="og:description" content="Creates a JavaScript Date instance that represents a single moment in time. 
-Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
-
-创建一个代表某一时刻时间的j">
-<meta property="og:updated_time" content="2016-03-30T03:10:29.000Z">
+<meta property="og:description" content="Creates a JavaScript Date instance that represents a single moment in time.Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
+创建一个代表某一时刻时间的js">
+<meta property="og:updated_time" content="2016-03-30T15:27:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="date对象详解【翻译自Dash javascript文档】">
-<meta name="twitter:description" content="Creates a JavaScript Date instance that represents a single moment in time. 
-Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
-
-创建一个代表某一时刻时间的j">
+<meta name="twitter:description" content="Creates a JavaScript Date instance that represents a single moment in time.Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
+创建一个代表某一时刻时间的js">
 
 
 
@@ -334,12 +328,11 @@ Date objects are based on a time value that is the number of milliseconds since 
       
 
       
-        <pre><code>Creates a JavaScript Date instance that represents a single moment in time. 
-Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
-
-创建一个代表某一时刻时间的js Date对象，
-Date对象时间是相对于1970年7月1日（世界统一时）的毫秒数
-</code></pre> <a id="more"></a>   
+        <blockquote>
+<p>Creates a JavaScript Date instance that represents a single moment in time.<br>Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.</p>
+<p>创建一个代表某一时刻时间的js Date对象，<br>Date对象时间是相对于1970年7月1日（世界统一时）的毫秒数</p>
+</blockquote>
+<a id="more"></a>  
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'December 17, 1995 03:24:00'</span>);</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'1995-12-17T03:24:00'</span>);</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1995</span>, <span class="number">11</span>, <span class="number">17</span>);</span><br><span class="line"><span class="keyword">var</span> birthday = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1995</span>, <span class="number">11</span>, <span class="number">17</span>, <span class="number">3</span>, <span class="number">24</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> unixTimestamp = <span class="built_in">Date</span>.now(); <span class="comment">// in milliseconds</span></span><br></pre></td></tr></table></figure>
 <h2 id="Syntax-‘sɪntaeks-【语法】"><a href="#Syntax-‘sɪntaeks-【语法】" class="headerlink" title="Syntax [‘sɪntæks]【语法】"></a>Syntax [‘sɪntæks]【语法】</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(value);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(dateString);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);</span><br></pre></td></tr></table></figure>
 <ul>
@@ -727,6 +720,10 @@ Date.length的值为7，这个值指的是date处理的参数的个数
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2016/03/30/sass项目config-rb配置/" rel="prev" title="sass项目config.rb配置">
+                sass项目config.rb配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -797,7 +794,7 @@ Date.length的值为7，这个值指的是date处理的参数的个数
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -805,7 +802,7 @@ Date.length的值为7，这个值指的是date处理的参数的个数
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

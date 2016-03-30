@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="个人心得," />
+  <meta name="keywords" content="jaylen, html, css, javascript, 鸡冷" />
 
 
 
@@ -57,33 +57,16 @@
 
 
 
-<meta name="description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）
-      2.浮动元素外边距对正常流元素无影响">
+<meta name="description" content="config.rb文件是Compass工程的核心。它定义了文件和相关资源之间的关系，CSS是如何并在哪里生成的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浮动元素外边距表现详解">
-<meta property="og:url" content="http://jaylentse.github.io/2016/03/28/浮动元素外边距/index.html">
+<meta property="og:title" content="sass项目config.rb配置">
+<meta property="og:url" content="http://jaylentse.github.io/2016/03/30/sass项目config-rb配置/index.html">
 <meta property="og:site_name" content="小鸡冷前端课堂">
-<meta property="og:description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）
-      2.浮动元素外边距对正常流元素无影响">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt4.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt2.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt5.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt6.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt7.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt2.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgt3.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgl1.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgl2.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgl3.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgr1.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgr2.png">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/mgr3.png">
-<meta property="og:updated_time" content="2016-03-28T09:33:28.000Z">
+<meta property="og:description" content="config.rb文件是Compass工程的核心。它定义了文件和相关资源之间的关系，CSS是如何并在哪里生成的">
+<meta property="og:updated_time" content="2016-03-30T15:25:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浮动元素外边距表现详解">
-<meta name="twitter:description" content="注意：1.浮动元素外边距不合并 （水平垂直都不合并）
-      2.浮动元素外边距对正常流元素无影响">
-<meta name="twitter:image" content="http://jaylentse.github.io/article-images/mgt4.png">
+<meta name="twitter:title" content="sass项目config.rb配置">
+<meta name="twitter:description" content="config.rb文件是Compass工程的核心。它定义了文件和相关资源之间的关系，CSS是如何并在哪里生成的">
 
 
 
@@ -101,7 +84,7 @@
   };
 </script>
 
-  <title> 浮动元素外边距表现详解 | 小鸡冷前端课堂 </title>
+  <title> sass项目config.rb配置 | 小鸡冷前端课堂 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -241,7 +224,7 @@
             
             
               
-                浮动元素外边距表现详解
+                sass项目config.rb配置
               
             
           </h1>
@@ -253,8 +236,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-28T10:45:09+08:00" content="2016-03-28">
-              2016-03-28
+            <time itemprop="dateCreated" datetime="2016-03-30T22:34:57+08:00" content="2016-03-30">
+              2016-03-30
             </time>
           </span>
 
@@ -274,6 +257,18 @@
 
                 
                 
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/css/sass/" itemprop="url" rel="index">
+                    <span itemprop="name">sass</span>
+                  </a>
+                </span>
+
+                
+                
 
               
             </span>
@@ -283,8 +278,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/28/浮动元素外边距/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/28/浮动元素外边距/" itemprop="commentsCount"></span>
+                <a href="/2016/03/30/sass项目config-rb配置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/30/sass项目config-rb配置/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,29 +301,16 @@
       
 
       
-        <pre><code>注意：1.浮动元素外边距不合并 （水平垂直都不合并）
-      2.浮动元素外边距对正常流元素无影响 
-</code></pre><a id="more"></a>
-<h2 id="1-垂直外边距"><a href="#1-垂直外边距" class="headerlink" title="1.垂直外边距"></a>1.垂直外边距</h2><h3 id="nbsp-nbsp-1-1-margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】"><a href="#nbsp-nbsp-1-1-margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】" class="headerlink" title="&nbsp;&nbsp;1.1 margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】"></a>&nbsp;&nbsp;1.1 margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】</h3><h4 id="nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值</h4><p><img src="/article-images/mgt4.png" alt="浮动元素margin-top设置为正值,影响自身并带动垂直方向下面的元素" title="浮动元素margin-top设置为正值,影响自身并带动垂直方向下面的元素"></p>
-<h4 id="nbsp-nbsp-nbsp-nbsp-1-1-2-设置为负值"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-2-设置为负值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.2 设置为负值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.2 设置为负值</h4><p><img src="/article-images/mgt2.png" alt="黄色盒子设置margin-top负值，使黄色盒子往上拉并与上面绿色的盒子重叠" title="黄色盒子设置margin-top负值，使黄色盒子往上拉并与上面绿色的盒子重叠"><br><img src="/article-images/mgt5.png" alt="绿色盒子设置margin-top负值，使绿色盒子往上拉，并超出父盒子" title="绿色盒子设置margin-top负值，使绿色盒子往上拉，并超出父盒子"><br><img src="/article-images/mgt6.png" alt="继续减小绿色盒子的margin-top,使其完全超出父盒子，黄色盒子最顶智能紧贴父盒子上边缘，不会超出父盒子" title="继续减小绿色盒子的margin-top,使其完全超出父盒子 &lt;br /&gt; 黄色盒子最顶只会紧贴父盒子上边缘，不会跟着跑出去"></p>
-<h3 id="nbsp-nbsp-1-2-margin-bottom【影响垂直方向下面元素的位置-对自己位置无影响】"><a href="#nbsp-nbsp-1-2-margin-bottom【影响垂直方向下面元素的位置-对自己位置无影响】" class="headerlink" title="&nbsp;&nbsp;1.2 margin-bottom【影响垂直方向下面元素的位置,对自己位置无影响】"></a>&nbsp;&nbsp;1.2 margin-bottom【影响垂直方向下面元素的位置,对自己位置无影响】</h3><h4 id="nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值-1"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值-1" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为正值</h4><p><img src="/article-images/mgt7.png" alt="绿色盒子设置margin-bottom正值，会把在其下面的黄色盒子往下挤" title="绿色盒子设置margin-bottom正值，会把在其下面的黄色盒子往下挤"></p>
-<h4 id="nbsp-nbsp-nbsp-nbsp-1-1-1-设置为负值"><a href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为负值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为负值"></a>&nbsp;&nbsp;&nbsp;&nbsp;1.1.1 设置为负值</h4><p><img src="/article-images/mgt2.png" alt="绿色盒子设置margin-bottom负值，会把黄色盒子往上拉，并使黄色盒子与自己重叠" title="绿色盒子设置margin-bottom负值，会把黄色盒子往上拉 &lt;br /&gt; 并使黄色盒子与自己重叠"><br><img src="/article-images/mgt3.png" alt="继续减少绿色盒子margin-bottom值，可发现黄色盒子最高被拉至父盒子上内边界，黄色盒子不会超出父盒子" title="继续减少绿色盒子margin-bottom值，可发现黄色盒子最高被拉至父盒子上内边界 &lt;br /&gt; 黄色盒子不会超出父盒子"></p>
-<h2 id="2-水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】"><a href="#2-水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】" class="headerlink" title="2.水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】"></a>2.水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】</h2><h4 id="nbsp-nbsp-2-1-元素左浮动，设置margin-left"><a href="#nbsp-nbsp-2-1-元素左浮动，设置margin-left" class="headerlink" title="&nbsp;&nbsp;2.1 元素左浮动，设置margin-left"></a>&nbsp;&nbsp;2.1 元素左浮动，设置margin-left</h4><h4 id="nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left正值"><a href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left正值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-left正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-left正值</h4><p><img src="/article-images/mgl1.png" alt="自身带动右边左浮动元素往右边跑" title="自身并带动右边左浮动元素往右边跑"></p>
-<h4 id="nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left负值"><a href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left负值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-left负值"></a>&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-left负值</h4><p><img src="/article-images/mgl2.png" alt="使自身往左跑，并超出父盒子" title="使自身往左跑，并超出父盒子"><br><img src="/article-images/mgl3.png" alt="继续减小绿色盒子左外边距，直至绿色盒子完全跑出父盒子，而蓝色盒子做多顶在父盒子左内边界，并不会跟着跑出去" title="继续减小绿色盒子左外边距，直至绿色盒子完全跑出父盒子 &lt;br /&gt; 而蓝色盒子做多顶在父盒子左内边界，并不会跟着跑出去"></p>
-<h4 id="nbsp-nbsp-2-1-元素左浮动，设置margin-right"><a href="#nbsp-nbsp-2-1-元素左浮动，设置margin-right" class="headerlink" title="&nbsp;&nbsp;2.1 元素左浮动，设置margin-right"></a>&nbsp;&nbsp;2.1 元素左浮动，设置margin-right</h4><h4 id="nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right正值"><a href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right正值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-right正值"></a>&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-right正值</h4><p><img src="/article-images/mgr1.png" alt="设置margin-right正值会把其右边左浮动元素往右推" title="设置margin-right正值会把其右边左浮动元素往右推"></p>
-<h4 id="nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right负值"><a href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right负值" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-right负值"></a>&nbsp;&nbsp;&nbsp;&nbsp;2.1.1 设置margin-right负值</h4><p><img src="/article-images/mgr2.png" alt="将其右边左浮动元素往左边拉，并覆盖自己" title="将其右边左浮动元素往左边拉，并覆盖自己"><br><img src="/article-images/mgr3.png" alt="继续减少绿色盒子右外边距，直至蓝色盒子贴着父元素左内边界，此时再减少绿色盒子右外边距，蓝色盒子不会再往左边跑" title="继续减少绿色盒子右外边距，直至蓝色盒子贴着父元素左内边界 &lt;br /&gt; 此时再减少绿色盒子右外边距，蓝色盒子不会再往左边跑"></p>
-<hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
-<li><strong><em>margin-top影响自身位置，设置负值会把自己往上拉</em></strong></li>
-<li><strong><em>margin-bottom只影响元素下面的元素而不影响自身位置，正值往下推，负值往上拉（会使下面的元素覆盖自己），自身位置不变，垂直边距不合并</em></strong></li>
-<li><strong><em>对于左浮动的元素margin-left影响自身，设置负值会把自己往左边拉</em></strong></li>
-<li><strong><em>对于左浮动的元素margin-right会影响在其右边左浮动元素，对自身位置无影响，正值往右推，负值往左拉（会使右边的元素覆盖自己）</em></strong></li>
-<li><strong><em>对于右浮动的元素margin-right影响自身，设置负值会把自己往右边拉</em></strong></li>
-<li><strong><em>对于右浮动的元素margin-left会影响在其左边右浮动元素，对自身位置无影响，正值往左推，负值往右拉（会使左边的元素覆盖自己）</em></strong></li>
-<li><strong><em>自身设置可以影响自身的负外边距可以使自己从父元素盒子里跑出去，而设置可以影响兄弟元素的负边距无法使兄弟元素离开父元素盒子</em></strong></li>
-<li><strong><em>水平外边距过大会把在同一行的浮动元素挤到下一行</em></strong></li>
-</ol>
-
+        <blockquote>
+<p>config.rb文件是Compass工程的核心。<br>它定义了文件和相关资源之间的关系，CSS是如何并在哪里生成的<br><a id="more"></a></p>
+</blockquote>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">require</span> <span class="string">'compass/import-once/activate'</span></span><br><span class="line"><span class="comment"># Require any additional compass plugins here.</span></span><br><span class="line"><span class="comment"># 这里导入其他Compass插件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Set this to the root of your project when deployed:</span></span><br><span class="line"><span class="comment"># 部署时把一下路径设置为工程根目录：</span></span><br><span class="line">http_path = <span class="string">"/"</span></span><br><span class="line">css_dir = <span class="string">"css"</span></span><br><span class="line">sass_dir = <span class="string">"sass"</span></span><br><span class="line">images_dir = <span class="string">"img"</span></span><br><span class="line">javascripts_dir = <span class="string">"js"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># You can select your preferred output style here (can be overridden via the command line):</span></span><br><span class="line"><span class="comment"># 根据个人偏好选择输出样式：</span></span><br><span class="line"><span class="comment"># output_style = :expanded or :nested or :compact or :compressed</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># To enable relative paths to assets via compass helper functions. Uncomment:</span></span><br><span class="line">通过Compass帮助工具打开资源相对路径功能</span><br><span class="line"><span class="comment"># relative_assets = true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># To disable debugging comments that display the original location of your selectors. Uncomment:</span></span><br><span class="line">关闭显示在选择器原始位置前的调试注释</span><br><span class="line"><span class="comment"># line_comments = false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#如果你想用sass格式就自己翻译下面这段，我反正不用</span></span><br><span class="line"><span class="comment"># If you prefer the indented syntax, you might want to regenerate this</span></span><br><span class="line"><span class="comment"># project again passing --syntax sass, or you can uncomment this:</span></span><br><span class="line"><span class="comment"># preferred_syntax = :sass</span></span><br><span class="line"><span class="comment"># and then run:</span></span><br><span class="line"><span class="comment"># sass-convert -R --from scss --to sass sass scss &amp;&amp; rm -rf sass &amp;&amp; mv scss sass</span></span><br></pre></td></tr></table></figure>
+<h2 id="为工程资源设定名称和路径"><a href="#为工程资源设定名称和路径" class="headerlink" title="为工程资源设定名称和路径"></a>为工程资源设定名称和路径</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 部署时把以下路径设置为工程根目录：</span></span><br><span class="line">http_path = <span class="string">"/"</span></span><br><span class="line">css_dir = <span class="string">"css"</span></span><br><span class="line">sass_dir = <span class="string">"sass"</span></span><br><span class="line">images_dir = <span class="string">"img"</span></span><br><span class="line">javascripts_dir = <span class="string">"js"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>它们都是相对于HTTP的路径，所以只要HTTP路径保持在根目录下，其他文件的路径都是相对这个根目录的相对路径</li>
+<li>compass create命令创建的默认config.rb文件可能省略了其他可能有用的相对路径，如web字体的相对路径。因此，在其他文件夹的路径之后可能要添加这行代码</li>
+</ul>
+<h2 id="设定CSS输出样式"><a href="#设定CSS输出样式" class="headerlink" title="设定CSS输出样式"></a>设定CSS输出样式</h2><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><h2 id="打开相对资源路径功能"><a href="#打开相对资源路径功能" class="headerlink" title="打开相对资源路径功能"></a>打开相对资源路径功能</h2>
       
     </div>
 
@@ -340,28 +322,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/个人心得/" rel="tag">#个人心得</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/28/Array数组对象/" rel="next" title="Array数组对象">
-                <i class="fa fa-chevron-left"></i> Array数组对象
+              <a href="/2016/03/29/date对象详解/" rel="next" title="date对象详解【翻译自Dash javascript文档】">
+                <i class="fa fa-chevron-left"></i> date对象详解【翻译自Dash javascript文档】
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/28/CSS颜色关键词【妈妈再也不用担心我词汇量不够啦】/" rel="prev" title="CSS颜色关键词【妈妈再也不用担心我词汇量不够啦】">
-                CSS颜色关键词【妈妈再也不用担心我词汇量不够啦】 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -387,8 +359,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/28/浮动元素外边距/"
-           data-title="浮动元素外边距表现详解" data-url="http://jaylentse.github.io/2016/03/28/浮动元素外边距/">
+      <div class="ds-thread" data-thread-key="2016/03/30/sass项目config-rb配置/"
+           data-title="sass项目config.rb配置" data-url="http://jaylentse.github.io/2016/03/30/sass项目config-rb配置/">
       </div>
     
   </div>
@@ -502,7 +474,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-垂直外边距"><span class="nav-number">1.</span> <span class="nav-text">1.垂直外边距</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nbsp-nbsp-1-1-margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】"><span class="nav-number">1.1.</span> <span class="nav-text">  1.1 margin-top【影响自身位置，同时带动垂直位置下面的浮动元素】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值"><span class="nav-number">1.1.1.</span> <span class="nav-text">    1.1.1 设置为正值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-1-1-2-设置为负值"><span class="nav-number">1.1.2.</span> <span class="nav-text">    1.1.2 设置为负值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nbsp-nbsp-1-2-margin-bottom【影响垂直方向下面元素的位置-对自己位置无影响】"><span class="nav-number">1.2.</span> <span class="nav-text">  1.2 margin-bottom【影响垂直方向下面元素的位置,对自己位置无影响】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为正值-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">    1.1.1 设置为正值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-1-1-1-设置为负值"><span class="nav-number">1.2.2.</span> <span class="nav-text">    1.1.1 设置为负值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】"><span class="nav-number">2.</span> <span class="nav-text">2.水平边距（以左浮动为例，右浮动同理）【左浮动的margin-left对应右浮动的margin-right】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-2-1-元素左浮动，设置margin-left"><span class="nav-number">2.0.1.</span> <span class="nav-text">  2.1 元素左浮动，设置margin-left</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left正值"><span class="nav-number">2.0.2.</span> <span class="nav-text">    2.1.1 设置margin-left正值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-left负值"><span class="nav-number">2.0.3.</span> <span class="nav-text">    2.1.1 设置margin-left负值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-2-1-元素左浮动，设置margin-right"><span class="nav-number">2.0.4.</span> <span class="nav-text">  2.1 元素左浮动，设置margin-right</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right正值"><span class="nav-number">2.0.5.</span> <span class="nav-text">    2.1.1 设置margin-right正值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nbsp-nbsp-nbsp-nbsp-2-1-1-设置margin-right负值"><span class="nav-number">2.0.6.</span> <span class="nav-text">    2.1.1 设置margin-right负值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为工程资源设定名称和路径"><span class="nav-number">1.</span> <span class="nav-text">为工程资源设定名称和路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设定CSS输出样式"><span class="nav-number">2.</span> <span class="nav-text">设定CSS输出样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开相对资源路径功能"><span class="nav-number">4.</span> <span class="nav-text">打开相对资源路径功能</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
