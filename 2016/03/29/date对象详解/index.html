@@ -69,7 +69,7 @@ Date objects are based on a time value that is the number of milliseconds since 
 Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC【协调世界时】.
 
 创建一个代表某一时刻时间的j">
-<meta property="og:updated_time" content="2016-03-30T01:28:59.000Z">
+<meta property="og:updated_time" content="2016-03-30T01:43:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="date对象详解【翻译自Dash javascript文档】">
 <meta name="twitter:description" content="Creates a JavaScript Date instance that represents a single moment in time. 
@@ -491,22 +491,27 @@ Date.length的值为7，这个值指的是date处理的参数的个数
 <li>Date.prototype.getMinutes()</li>
 </ul>
 <p>Returns the minutes (0-59) in the specified date according to local time.</p>
+<p>返回指定时间相对于当地时间的分钟数（0-59）</p>
 <ul>
 <li>Date.prototype.getMonth()</li>
 </ul>
 <p>Returns the month (0-11) in the specified date according to local time.</p>
+<p>返回指定时间相对于当地时间的月份（0-11）</p>
 <ul>
 <li>Date.prototype.getSeconds()</li>
 </ul>
 <p>Returns the seconds (0-59) in the specified date according to local time.</p>
+<p>返回指定时间相对于当地时间的秒数（0-59）</p>
 <ul>
 <li>Date.prototype.getTime()</li>
 </ul>
 <p>Returns the numeric value of the specified date as the number of milliseconds since January 1, 1970, 00:00:00 UTC (negative for prior times).</p>
+<p>返回指定时间距1970年1月1日0点的毫秒数</p>
 <ul>
 <li>Date.prototype.getTimezoneOffset()</li>
 </ul>
 <p>Returns the time-zone offset in minutes for the current locale.</p>
+<p>返回用分钟数表示的当前时间当前时区与世界统一时的时差</p>
 <ul>
 <li>Date.prototype.getUTCDate()</li>
 </ul>
@@ -543,6 +548,7 @@ Date.length的值为7，这个值指的是date处理的参数的个数
 <li>Date.prototype.getYear() </li>
 </ul>
 <p>Returns the year (usually 2-3 digits) in the specified date according to local time. Use getFullYear() instead.</p>
+<p>返回指定日期相对于当地时间年份（通常返回2-3位数），推荐以getFullYear()方法取代这个方法。</p>
 <p><code>Setter(设置)</code></p>
 <ul>
 <li>Date.prototype.setDate()</li>
