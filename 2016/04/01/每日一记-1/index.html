@@ -73,7 +73,7 @@
 自己创造的几个混合宏
 
 1234567891011121314151617181920212223242526272829303132/*占位符*/%horizontal-vertical-center &amp;#123;  margin:">
-<meta property="og:updated_time" content="2016-04-01T03:19:49.000Z">
+<meta property="og:updated_time" content="2016-04-01T03:41:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="每日一记">
 <meta name="twitter:description" content="sass减法在固定宽度盒子调节padding时超好用，直接按psd测量整个宽度赋给变量，当需要调节padding时直接把padding减掉就好（高度同理）
@@ -320,6 +320,10 @@
 <li>搜索框placeholder</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> oInp = <span class="built_in">document</span>.getElementById(<span class="string">'search-text'</span>);</span><br><span class="line">  oInp.onfocus = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.value = <span class="string">''</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  oInp.onblur = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.value = <span class="string">'空气净化器'</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>alert()只接受字符串参数，如果传入非字符串参数则会在后台自动转换为字符串再弹出。如果无法转换为字符串则会报错</li>
+</ul>
+
       
     </div>
 
