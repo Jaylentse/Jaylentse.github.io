@@ -57,31 +57,16 @@
 
 
 
-<meta name="description" content="sass减法在固定宽度盒子调节padding时超好用，直接按psd测量整个宽度赋给变量，当需要调节padding时直接把padding减掉就好（高度同理）
-
-
-自己创造的几个混合宏
-
-1234567891011121314151617181920212223242526272829303132/*占位符*/%horizontal-vertical-center &amp;#123;  margin:">
+<meta name="description" content="sass减法在固定宽度盒子调节padding时超好用，直接按psd测量整个宽度赋给变量，当需要调节padding时直接把padding减掉就好（高度同理）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="每日一记">
 <meta property="og:url" content="http://jaylentse.github.io/2016/04/01/每日一记-1/index.html">
 <meta property="og:site_name" content="小鸡冷前端课堂">
-<meta property="og:description" content="sass减法在固定宽度盒子调节padding时超好用，直接按psd测量整个宽度赋给变量，当需要调节padding时直接把padding减掉就好（高度同理）
-
-
-自己创造的几个混合宏
-
-1234567891011121314151617181920212223242526272829303132/*占位符*/%horizontal-vertical-center &amp;#123;  margin:">
-<meta property="og:updated_time" content="2016-04-01T03:41:51.000Z">
+<meta property="og:description" content="sass减法在固定宽度盒子调节padding时超好用，直接按psd测量整个宽度赋给变量，当需要调节padding时直接把padding减掉就好（高度同理）">
+<meta property="og:updated_time" content="2016-04-01T03:57:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="每日一记">
-<meta name="twitter:description" content="sass减法在固定宽度盒子调节padding时超好用，直接按psd测量整个宽度赋给变量，当需要调节padding时直接把padding减掉就好（高度同理）
-
-
-自己创造的几个混合宏
-
-1234567891011121314151617181920212223242526272829303132/*占位符*/%horizontal-vertical-center &amp;#123;  margin:">
+<meta name="twitter:description" content="sass减法在固定宽度盒子调节padding时超好用，直接按psd测量整个宽度赋给变量，当需要调节padding时直接把padding减掉就好（高度同理）">
 
 
 
@@ -304,12 +289,16 @@
       
 
       
-        <a id="more"></a>
-<ul>
+        <ul>
 <li>sass减法在固定宽度盒子调节padding时超好用，直接按psd测量整个宽度赋给变量，当需要调节padding时直接把padding减掉就好（高度同理）</li>
 </ul>
+<a id="more"></a>
 <ul>
-<li>自己创造的几个混合宏</li>
+<li>alert()只接受字符串参数，如果传入非字符串参数则会在后台自动转换为字符串再弹出。如果无法转换为字符串则会报错</li>
+<li><p>属性选择器权重与类、伪类选择器权重一样</p>
+</li>
+<li><p>自己创造的几个混合宏</p>
+</li>
 </ul>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*占位符*/</span></span><br><span class="line">%horizontal-vertical-center &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*混合宏*/</span></span><br><span class="line"><span class="comment">/*版心*/</span></span><br><span class="line">@<span class="keyword">mixin</span> banxin(<span class="variable">$height</span>, <span class="variable">$width</span>: <span class="variable">$center-width</span>)&#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="variable">$width</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="variable">$height</span>;</span><br><span class="line">  @<span class="keyword">extend</span> %horizontal-vertical-center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*分割线*/</span></span><br><span class="line">@<span class="keyword">mixin</span> separate(<span class="variable">$margin-left</span>: 11px, <span class="variable">$margin-right</span>: 10px) &#123;</span><br><span class="line">  &amp;::after &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="variable">$separate-color</span>;</span><br><span class="line">    <span class="attribute">vertical-align</span>: text-bottom;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="variable">$margin-left</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="variable">$margin-right</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*小图标*/</span></span><br><span class="line">@<span class="keyword">mixin</span> icon(<span class="variable">$url</span>, <span class="variable">$width</span>, <span class="variable">$height</span>, <span class="variable">$position</span>: 0 0)&#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">  <span class="attribute">width</span>: <span class="variable">$width</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="variable">$height</span>;</span><br><span class="line">  <span class="attribute">background</span>: url(<span class="variable">$url</span>) no-repeat <span class="variable">$position</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
@@ -320,9 +309,6 @@
 <li>搜索框placeholder</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> oInp = <span class="built_in">document</span>.getElementById(<span class="string">'search-text'</span>);</span><br><span class="line">  oInp.onfocus = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.value = <span class="string">''</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  oInp.onblur = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.value = <span class="string">'空气净化器'</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>alert()只接受字符串参数，如果传入非字符串参数则会在后台自动转换为字符串再弹出。如果无法转换为字符串则会报错</li>
-</ul>
 
       
     </div>
