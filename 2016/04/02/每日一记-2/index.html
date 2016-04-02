@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="jaylen, html, css, javascript, 鸡冷" />
+  <meta name="keywords" content="每日一记,sass," />
 
 
 
@@ -57,16 +57,22 @@
 
 
 
-<meta name="description" content="常用类名命名">
+<meta name="description" content="利用sass for循环插入精灵图小图标(方便快捷哈哈哈哈)
+
+12345678910/*将图标的position存在一个二维数组里*/$icon-pos: (0 0) (0 -27px) (0 -52px) (0 -77px) (0 -102px) (0 -126px) (0 -151px) (0 -176px) (0 -201px) (0 -227px) (0 -252px) (0 -277">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML+CSS常用类名">
-<meta property="og:url" content="http://jaylentse.github.io/2016/04/01/HTML-CSS常用类名/index.html">
+<meta property="og:title" content="利用sass for循环插入精灵图小图标">
+<meta property="og:url" content="http://jaylentse.github.io/2016/04/02/每日一记-2/index.html">
 <meta property="og:site_name" content="小鸡冷前端课堂">
-<meta property="og:description" content="常用类名命名">
-<meta property="og:updated_time" content="2016-04-02T06:03:00.000Z">
+<meta property="og:description" content="利用sass for循环插入精灵图小图标(方便快捷哈哈哈哈)
+
+12345678910/*将图标的position存在一个二维数组里*/$icon-pos: (0 0) (0 -27px) (0 -52px) (0 -77px) (0 -102px) (0 -126px) (0 -151px) (0 -176px) (0 -201px) (0 -227px) (0 -252px) (0 -277">
+<meta property="og:updated_time" content="2016-04-02T08:04:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML+CSS常用类名">
-<meta name="twitter:description" content="常用类名命名">
+<meta name="twitter:title" content="利用sass for循环插入精灵图小图标">
+<meta name="twitter:description" content="利用sass for循环插入精灵图小图标(方便快捷哈哈哈哈)
+
+12345678910/*将图标的position存在一个二维数组里*/$icon-pos: (0 0) (0 -27px) (0 -52px) (0 -77px) (0 -102px) (0 -126px) (0 -151px) (0 -176px) (0 -201px) (0 -227px) (0 -252px) (0 -277">
 
 
 
@@ -84,7 +90,7 @@
   };
 </script>
 
-  <title> HTML+CSS常用类名 | 小鸡冷前端课堂 </title>
+  <title> 利用sass for循环插入精灵图小图标 | 小鸡冷前端课堂 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -224,7 +230,7 @@
             
             
               
-                HTML+CSS常用类名
+                利用sass for循环插入精灵图小图标
               
             
           </h1>
@@ -236,19 +242,50 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-01T10:36:56+08:00" content="2016-04-01">
-              2016-04-01
+            <time itemprop="dateCreated" datetime="2016-04-02T15:08:40+08:00" content="2016-04-02">
+              2016-04-02
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/每日一记/" itemprop="url" rel="index">
+                    <span itemprop="name">每日一记</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/每日一记/sass/" itemprop="url" rel="index">
+                    <span itemprop="name">sass</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/01/HTML-CSS常用类名/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/01/HTML-CSS常用类名/" itemprop="commentsCount"></span>
+                <a href="/2016/04/02/每日一记-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/02/每日一记-2/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -270,157 +307,10 @@
       
 
       
-        <blockquote>
-<p>常用类名命名</p>
-</blockquote>
-<a id="more"></a>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Section</th>
-<th style="text-align:left">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">页头</td>
-<td style="text-align:left"><code>header</code></td>
-</tr>
-<tr>
-<td style="text-align:left">登陆条</td>
-<td style="text-align:left"><code>loginBar</code></td>
-</tr>
-<tr>
-<td style="text-align:left">标志</td>
-<td style="text-align:left"><code>logo</code></td>
-</tr>
-<tr>
-<td style="text-align:left">侧栏</td>
-<td style="text-align:left"><code>sideBar</code></td>
-</tr>
-<tr>
-<td style="text-align:left">广告</td>
-<td style="text-align:left"><code>Banner</code></td>
-</tr>
-<tr>
-<td style="text-align:left">导航</td>
-<td style="text-align:left"><code>nva</code></td>
-</tr>
-<tr>
-<td style="text-align:left">子导航</td>
-<td style="text-align:left"><code>subNav</code></td>
-</tr>
-<tr>
-<td style="text-align:left">菜单</td>
-<td style="text-align:left"><code>menu</code></td>
-</tr>
-<tr>
-<td style="text-align:left">子菜单</td>
-<td style="text-align:left"><code>subMenu</code></td>
-</tr>
-<tr>
-<td style="text-align:left">搜索</td>
-<td style="text-align:left"><code>search</code></td>
-</tr>
-<tr>
-<td style="text-align:left">滚动</td>
-<td style="text-align:left"><code>scroll</code></td>
-</tr>
-<tr>
-<td style="text-align:left">页面主题</td>
-<td style="text-align:left"><code>main</code></td>
-</tr>
-<tr>
-<td style="text-align:left">内容</td>
-<td style="text-align:left"><code>content</code></td>
-</tr>
-<tr>
-<td style="text-align:left">标签页</td>
-<td style="text-align:left"><code>tab</code></td>
-</tr>
-<tr>
-<td style="text-align:left">文章列表</td>
-<td style="text-align:left"><code>list</code></td>
-</tr>
-<tr>
-<td style="text-align:left">提醒消息</td>
-<td style="text-align:left"><code>msg</code></td>
-</tr>
-<tr>
-<td style="text-align:left">小技巧</td>
-<td style="text-align:left"><code>tips</code></td>
-</tr>
-<tr>
-<td style="text-align:left">栏目标题</td>
-<td style="text-align:left"><code>title</code></td>
-</tr>
-<tr>
-<td style="text-align:left">加入</td>
-<td style="text-align:left"><code>joinUs</code></td>
-</tr>
-<tr>
-<td style="text-align:left">指南</td>
-<td style="text-align:left"><code>guide</code></td>
-</tr>
-<tr>
-<td style="text-align:left">热点</td>
-<td style="text-align:left"><code>hot</code></td>
-</tr>
-<tr>
-<td style="text-align:left">热销</td>
-<td style="text-align:left"><code>hotSell</code></td>
-</tr>
-<tr>
-<td style="text-align:left">新闻</td>
-<td style="text-align:left"><code>news</code></td>
-</tr>
-<tr>
-<td style="text-align:left">下载</td>
-<td style="text-align:left"><code>download</code></td>
-</tr>
-<tr>
-<td style="text-align:left">注册</td>
-<td style="text-align:left"><code>register</code></td>
-</tr>
-<tr>
-<td style="text-align:left">状态</td>
-<td style="text-align:left"><code>status</code></td>
-</tr>
-<tr>
-<td style="text-align:left">按钮</td>
-<td style="text-align:left"><code>btn</code></td>
-</tr>
-<tr>
-<td style="text-align:left">投票</td>
-<td style="text-align:left"><code>vote</code></td>
-</tr>
-<tr>
-<td style="text-align:left">合作伙伴</td>
-<td style="text-align:left"><code>partner</code></td>
-</tr>
-<tr>
-<td style="text-align:left">友情链接</td>
-<td style="text-align:left"><code>friendLinks</code></td>
-</tr>
-<tr>
-<td style="text-align:left">页脚</td>
-<td style="text-align:left"><code>footer</code></td>
-</tr>
-<tr>
-<td style="text-align:left">版权</td>
-<td style="text-align:left"><code>copyRight</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>个人收集</strong></td>
-</tr>
-<tr>
-<td style="text-align:left">公告</td>
-<td style="text-align:left"><code>bulletin</code></td>
-</tr>
-</tbody>
-</table>
-<p><code>妈的今天真是脑残了，给body设了背景色，z-index=-1元素上不来调试了一整天，坑爹！</code></p>
-<h3 id="…持续更新中"><a href="#…持续更新中" class="headerlink" title="…持续更新中"></a>…持续更新中</h3>
+        <ul>
+<li>利用sass for循环插入精灵图小图标(方便快捷哈哈哈哈)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/*将图标的position存在一个二维数组里*/</span><br><span class="line">$icon-pos: (0 0) (0 -27px) (0 -52px) (0 -77px) (0 -102px)</span><br><span class="line"> (0 -126px) (0 -151px) (0 -176px) (0 -201px) (0 -227px)</span><br><span class="line"> (0 -252px) (0 -277px);</span><br><span class="line"> /*使用for循环写入background-position值*/</span><br><span class="line"> @for $i from 2 through 12 &#123;</span><br><span class="line">          .icon-#&#123;$i&#125; &#123;</span><br><span class="line">            background-position: nth($icon-pos,$i);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -432,22 +322,26 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/每日一记/" rel="tag">#每日一记</a>
+          
+            <a href="/tags/sass/" rel="tag">#sass</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/01/每日一记-1/" rel="next" title="每日一记">
-                <i class="fa fa-chevron-left"></i> 每日一记
+              <a href="/2016/04/01/HTML-CSS常用类名/" rel="next" title="HTML+CSS常用类名">
+                <i class="fa fa-chevron-left"></i> HTML+CSS常用类名
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/02/每日一记-2/" rel="prev" title="利用sass for循环插入精灵图小图标">
-                利用sass for循环插入精灵图小图标 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -473,8 +367,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/01/HTML-CSS常用类名/"
-           data-title="HTML+CSS常用类名" data-url="http://jaylentse.github.io/2016/04/01/HTML-CSS常用类名/">
+      <div class="ds-thread" data-thread-key="2016/04/02/每日一记-2/"
+           data-title="利用sass for循环插入精灵图小图标" data-url="http://jaylentse.github.io/2016/04/02/每日一记-2/">
       </div>
     
   </div>
@@ -588,7 +482,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#…持续更新中"><span class="nav-number">1.</span> <span class="nav-text">…持续更新中</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
