@@ -57,16 +57,16 @@
 
 
 
-<meta name="description" content="个人收集的严格模式下会抛出错误的情况（非严格模式下不会抛出错误）">
+<meta name="description" content="惰性载入函数可以解决每次执行函数if选择分支都不变时的性能问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="严格模式下会导致错误的情况<br />持续更新...">
-<meta property="og:url" content="http://jaylentse.github.io/2016/04/07/严格模式下会导致错误的情况/index.html">
+<meta property="og:title" content="惰性载入函数">
+<meta property="og:url" content="http://jaylentse.github.io/2016/04/13/惰性载入函数/index.html">
 <meta property="og:site_name" content="小鸡冷前端课堂">
-<meta property="og:description" content="个人收集的严格模式下会抛出错误的情况（非严格模式下不会抛出错误）">
-<meta property="og:updated_time" content="2016-04-07T12:23:53.000Z">
+<meta property="og:description" content="惰性载入函数可以解决每次执行函数if选择分支都不变时的性能问题">
+<meta property="og:updated_time" content="2016-04-13T11:09:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="严格模式下会导致错误的情况<br />持续更新...">
-<meta name="twitter:description" content="个人收集的严格模式下会抛出错误的情况（非严格模式下不会抛出错误）">
+<meta name="twitter:title" content="惰性载入函数">
+<meta name="twitter:description" content="惰性载入函数可以解决每次执行函数if选择分支都不变时的性能问题">
 
 
 
@@ -84,7 +84,7 @@
   };
 </script>
 
-  <title> 严格模式下会导致错误的情况<br />持续更新... | 小鸡冷前端课堂 </title>
+  <title> 惰性载入函数 | 小鸡冷前端课堂 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -224,7 +224,7 @@
             
             
               
-                严格模式下会导致错误的情况<br />持续更新...
+                惰性载入函数
               
             
           </h1>
@@ -236,8 +236,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-07T14:40:09+08:00" content="2016-04-07">
-              2016-04-07
+            <time itemprop="dateCreated" datetime="2016-04-13T15:04:35+08:00" content="2016-04-13">
+              2016-04-13
             </time>
           </span>
 
@@ -247,8 +247,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/07/严格模式下会导致错误的情况/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/07/严格模式下会导致错误的情况/" itemprop="commentsCount"></span>
+                <a href="/2016/04/13/惰性载入函数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/13/惰性载入函数/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -271,19 +271,8 @@
 
       
         <blockquote>
-<p>个人收集的严格模式下会抛出错误的情况（非严格模式下不会抛出错误）</p>
+<p>惰性载入函数可以解决每次执行函数if选择分支都不变时的性能问题</p>
 </blockquote>
-<a id="more"></a>
-<h2 id="“use-strict”"><a href="#“use-strict”" class="headerlink" title="“use strict”"></a>“use strict”</h2><ol>
-<li>变量名、参数名、函数名不能命名为eval和arguements</li>
-<li>不允许使用with()语句，否则视为语法错误</li>
-<li>同一个函数不能中不能出现两个同名的参数</li>
-<li>初始化未经声明的变量会导致错误</li>
-<li>通过脚本访问arguments.callee会导致错误</li>
-<li>尝试写入未指定setter的属性会抛出错误</li>
-<li>尝试读取未指定getter的属性会抛出错误</li>
-</ol>
-<p>持续更新中…</p>
 
       
     </div>
@@ -301,16 +290,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/07/浏览器原始包含块/" rel="next" title="浏览器原始包含块">
-                <i class="fa fa-chevron-left"></i> 浏览器原始包含块
+              <a href="/2016/04/12/创建柯里化函数的通用方法/" rel="next" title="创建柯里化函数的通用方法">
+                <i class="fa fa-chevron-left"></i> 创建柯里化函数的通用方法
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/07/Object-defineProperty-方法定义对象属性/" rel="prev" title="Object.defineProperty()方法定义对象属性<br />【IE9+】">
-                Object.defineProperty()方法定义对象属性<br />【IE9+】 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/13/函数绑定/" rel="prev" title="函数绑定">
+                函数绑定 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -337,8 +326,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/07/严格模式下会导致错误的情况/"
-           data-title="严格模式下会导致错误的情况<br />持续更新..." data-url="http://jaylentse.github.io/2016/04/07/严格模式下会导致错误的情况/">
+      <div class="ds-thread" data-thread-key="2016/04/13/惰性载入函数/"
+           data-title="惰性载入函数" data-url="http://jaylentse.github.io/2016/04/13/惰性载入函数/">
       </div>
     
   </div>
@@ -452,7 +441,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#“use-strict”"><span class="nav-number">1.</span> <span class="nav-text">“use strict”</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
