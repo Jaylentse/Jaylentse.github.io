@@ -57,16 +57,16 @@
 
 
 
-<meta name="description" content="今天老师做了一个图片垂直滚动的案例，我做了一丢丢改动，让其滚动时可以变速 _">
+<meta name="description" content="今天老师做了一个基于鼠标事件的图片垂直滚动的案例，我做了一丢丢改动，让其滚动时可以变速 _">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小米滚动图可变速版">
 <meta property="og:url" content="http://jaylentse.github.io/2016/04/15/小米滚动图可变速版/index.html">
 <meta property="og:site_name" content="小鸡冷前端课堂">
-<meta property="og:description" content="今天老师做了一个图片垂直滚动的案例，我做了一丢丢改动，让其滚动时可以变速 _">
-<meta property="og:updated_time" content="2016-04-15T12:05:12.000Z">
+<meta property="og:description" content="今天老师做了一个基于鼠标事件的图片垂直滚动的案例，我做了一丢丢改动，让其滚动时可以变速 _">
+<meta property="og:updated_time" content="2016-04-16T01:12:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小米滚动图可变速版">
-<meta name="twitter:description" content="今天老师做了一个图片垂直滚动的案例，我做了一丢丢改动，让其滚动时可以变速 _">
+<meta name="twitter:description" content="今天老师做了一个基于鼠标事件的图片垂直滚动的案例，我做了一丢丢改动，让其滚动时可以变速 _">
 
 
 
@@ -290,7 +290,7 @@
 
       
         <blockquote>
-<p>今天老师做了一个图片垂直滚动的案例，我做了一丢丢改动，让其滚动时可以变速<em> _</em></p>
+<p>今天老师做了一个基于鼠标事件的图片垂直滚动的案例，我做了一丢丢改动，让其滚动时可以变速<em> _</em></p>
 </blockquote>
 <a id="more"></a>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span><br><span class="line">		<span class="selector-id">#slider</span> &#123;</span><br><span class="line">			<span class="attribute">width</span>: <span class="number">512px</span>;</span><br><span class="line">			<span class="attribute">height</span>: <span class="number">470px</span>;</span><br><span class="line">			<span class="attribute">overflow</span>: hidden;</span><br><span class="line">			<span class="attribute">margin</span>: <span class="number">50px</span> auto;</span><br><span class="line">			<span class="attribute">border</span>: <span class="number">3px</span> solid <span class="number">#f0f</span>;</span><br><span class="line">			<span class="attribute">position</span>:relative;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="selector-id">#slider</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">			<span class="attribute">position</span>: absolute;</span><br><span class="line">			<span class="attribute">cursor</span>: pointer;</span><br><span class="line">		&#125;</span><br><span class="line">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"slider"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"pic"</span> <span class="attr">src</span>=<span class="string">"mi.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span><br><span class="line">		<span class="keyword">var</span> sl = <span class="built_in">document</span>.getElementById(<span class="string">"slider"</span>);</span><br><span class="line">		<span class="keyword">var</span> pic = <span class="built_in">document</span>.getElementById(<span class="string">"pic"</span>);</span><br><span class="line">		<span class="keyword">var</span> speed = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">var</span> picTop = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">var</span> timer = <span class="literal">null</span>;</span><br><span class="line">		sl.onmousemove = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">			<span class="comment">//设置速度</span></span><br><span class="line">			 speed = (<span class="number">288</span> - event.pageY)/<span class="number">235</span>*<span class="number">20</span>;</span><br><span class="line">		&#125;;</span><br><span class="line">		sl.onmouseover = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">			 timer = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">			 	  picTop += speed;</span><br><span class="line">			 	  picTop = picTop &gt; <span class="number">0</span>?<span class="number">0</span>:picTop;</span><br><span class="line">			 	  picTop = picTop &lt; <span class="number">-1000</span>?<span class="number">-1000</span>:picTop;</span><br><span class="line">			 	  <span class="comment">//设置top值</span></span><br><span class="line">			 	  pic.style.top = picTop+<span class="string">"px"</span>;</span><br><span class="line">			 &#125;, <span class="number">30</span>);</span><br><span class="line">		&#125;;</span><br><span class="line">		sl.onmouseout = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">			 clearInterval(timer);</span><br><span class="line">			 timer = <span class="literal">null</span>;</span><br><span class="line">		&#125;;</span><br><span class="line">	</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -316,8 +316,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/15/巧用与或运算简化单if操作/" rel="next" title="巧用与或运算简化单if操作">
-                <i class="fa fa-chevron-left"></i> 巧用与或运算简化单if操作
+              <a href="/2016/04/15/巧用与或运算简化单if操作/" rel="next" title="巧用与或短路运算简化单if操作">
+                <i class="fa fa-chevron-left"></i> 巧用与或短路运算简化单if操作
               </a>
             
           </div>
@@ -398,7 +398,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -406,7 +406,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -415,7 +415,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
