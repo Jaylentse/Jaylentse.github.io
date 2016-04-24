@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HTTP协议," />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -57,18 +57,19 @@
 
 
 
-<meta name="description">
+<meta name="description" content="window.onload需要等待整个页面加载完成再调用js，当页面需要加载容量较大的资源时，会阻塞整个页面的运行，domReady可以通过DOMContentLoaded(HTML5事件)事件或IE下的 document.documentElement.doScroll(&amp;#39;left&amp;#39;)方法判断页面在形成完整dom树后马上调用js,从而增强用户体验
+1234567891011121">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTP报文">
-<meta property="og:url" content="http://jaylentse.github.io/2016/04/16/HTTP报文/index.html">
+<meta property="og:title" content="domReady">
+<meta property="og:url" content="http://jaylentse.github.io/2016/04/24/domReady/index.html">
 <meta property="og:site_name" content="小鸡冷前端课堂">
-<meta property="og:description">
-<meta property="og:image" content="http://jaylentse.github.io/article-images/message.png">
-<meta property="og:updated_time" content="2016-04-19T09:14:57.000Z">
+<meta property="og:description" content="window.onload需要等待整个页面加载完成再调用js，当页面需要加载容量较大的资源时，会阻塞整个页面的运行，domReady可以通过DOMContentLoaded(HTML5事件)事件或IE下的 document.documentElement.doScroll(&amp;#39;left&amp;#39;)方法判断页面在形成完整dom树后马上调用js,从而增强用户体验
+1234567891011121">
+<meta property="og:updated_time" content="2016-04-24T12:50:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTTP报文">
-<meta name="twitter:description">
-<meta name="twitter:image" content="http://jaylentse.github.io/article-images/message.png">
+<meta name="twitter:title" content="domReady">
+<meta name="twitter:description" content="window.onload需要等待整个页面加载完成再调用js，当页面需要加载容量较大的资源时，会阻塞整个页面的运行，domReady可以通过DOMContentLoaded(HTML5事件)事件或IE下的 document.documentElement.doScroll(&amp;#39;left&amp;#39;)方法判断页面在形成完整dom树后马上调用js,从而增强用户体验
+1234567891011121">
 
 
 
@@ -86,7 +87,7 @@
   };
 </script>
 
-  <title> HTTP报文 | 小鸡冷前端课堂 </title>
+  <title> domReady | 小鸡冷前端课堂 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -226,7 +227,7 @@
             
             
               
-                HTTP报文
+                domReady
               
             
           </h1>
@@ -238,8 +239,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-16T09:07:44+08:00" content="2016-04-16">
-              2016-04-16
+            <time itemprop="dateCreated" datetime="2016-04-24T20:41:26+08:00" content="2016-04-24">
+              2016-04-24
             </time>
           </span>
 
@@ -252,8 +253,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/HTTP协议/" itemprop="url" rel="index">
-                    <span itemprop="name">HTTP协议</span>
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
                   </a>
                 </span>
 
@@ -268,8 +269,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/16/HTTP报文/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/16/HTTP报文/" itemprop="commentsCount"></span>
+                <a href="/2016/04/24/domReady/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/24/domReady/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -291,11 +292,8 @@
       
 
       
-        <p><img src="/article-images/message.png" alt="HTTP报文结构" title="HTTP报文结构"></p>
-<a id="more"></a>
-<h1 id="1-起始行"><a href="#1-起始行" class="headerlink" title="1.起始行"></a>1.起始行</h1><p>所有的HTTP报文都以一个起始行作为开始。<strong>请求报文的起始行说明了<code>要干什么</code></strong>,<strong>响应报文的起始行说明了<code>发生了什么</code></strong></p>
-<p>…未完待续</p>
-
+        <p>window.onload需要等待整个页面加载完成再调用js，当页面需要加载容量较大的资源时，会阻塞整个页面的运行，domReady可以通过<code>DOMContentLoaded</code>(HTML5事件)事件或IE下的 <code>document.documentElement.doScroll(&#39;left&#39;)</code>方法判断页面在形成完整dom树后马上调用js,从而增强用户体验</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">domReady</span>(<span class="params">fn</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//对于现代浏览器,对DOMContentLoaded事件处理采用标准的事件绑定方式</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">document</span>.addEventListener)&#123;</span><br><span class="line">    <span class="built_in">document</span>.addEventListener(<span class="string">'DOMContentLoaded'</span>,fn,<span class="literal">false</span>);</span><br><span class="line">  &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    IEcontentLoaded(fn);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//IE模拟DOMContentLoaded</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">IEcontentLoaded</span>(<span class="params">fn</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> d = <span class="built_in">window</span>.document;</span><br><span class="line">    <span class="keyword">var</span> done = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//只执行一次的用户回调函数init()</span></span><br><span class="line">    <span class="keyword">var</span> init = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(!done)&#123;</span><br><span class="line">        done = <span class="literal">true</span>;</span><br><span class="line">        fn();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">try</span>&#123;</span><br><span class="line">        <span class="comment">//DOM树未创建之前调用doSroll会抛出错误</span></span><br><span class="line">        d.documentElement.doScroll(<span class="string">'left'</span>);</span><br><span class="line">      &#125;<span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="comment">//延迟再试一次</span></span><br><span class="line">        setTimeout(<span class="built_in">arguments</span>.callee,<span class="number">50</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">//如果没有错误就表示DOM数创建完毕,然后立马执行用户的回调</span></span><br><span class="line">      init();</span><br><span class="line">    &#125;)();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//监听document的加载状态</span></span><br><span class="line">    d.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="comment">//如果用户在domready之后绑定的函数,就立马执行</span></span><br><span class="line">      <span class="keyword">if</span>(d.readyState === <span class="string">'complete'</span>)&#123;</span><br><span class="line">        d.onreadystatechange = <span class="literal">null</span>;</span><br><span class="line">        init();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -309,7 +307,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/HTTP协议/" rel="tag">#HTTP协议</a>
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
           
         </div>
       
@@ -318,17 +316,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/15/向现有url的末尾添加查询字符串函数/" rel="next" title="向现有url的末尾添加查询字符串函数">
-                <i class="fa fa-chevron-left"></i> 向现有url的末尾添加查询字符串函数
+              <a href="/2016/04/24/pageXOffset和pageYOffset/" rel="next" title="pageXOffset和pageYOffset">
+                <i class="fa fa-chevron-left"></i> pageXOffset和pageYOffset
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/19/获取元素在页面上的偏移量/" rel="prev" title="获取元素在页面上的偏移量">
-                获取元素在页面上的偏移量 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -354,8 +348,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/16/HTTP报文/"
-           data-title="HTTP报文" data-url="http://jaylentse.github.io/2016/04/16/HTTP报文/">
+      <div class="ds-thread" data-thread-key="2016/04/24/domReady/"
+           data-title="domReady" data-url="http://jaylentse.github.io/2016/04/24/domReady/">
       </div>
     
   </div>
@@ -469,7 +463,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-起始行"><span class="nav-number">1.</span> <span class="nav-text">1.起始行</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
