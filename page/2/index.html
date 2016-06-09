@@ -226,8 +226,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/27/classList-1/" itemprop="url">
-                  classList（摘自官方文档）
+                <a class="post-title-link" href="/2016/05/16/jQuery插件框架/" itemprop="url">
+                  jQuery插件框架
                 </a>
               
             
@@ -240,8 +240,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-27T09:10:42+08:00" content="2016-04-27">
-              2016-04-27
+            <time itemprop="dateCreated" datetime="2016-05-16T01:09:12+08:00" content="2016-05-16">
+              2016-05-16
             </time>
           </span>
 
@@ -266,8 +266,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/javascript/翻译/" itemprop="url" rel="index">
-                    <span itemprop="name">翻译</span>
+                  <a href="/categories/javascript/jquery/" itemprop="url" rel="index">
+                    <span itemprop="name">jquery</span>
                   </a>
                 </span>
 
@@ -282,8 +282,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/27/classList-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/27/classList-1/" itemprop="commentsCount"></span>
+                <a href="/2016/05/16/jQuery插件框架/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/16/jQuery插件框架/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,10 +306,143 @@
 
       
         
-          <p>The Element.classList is a read-only property which returns live DOMTokenList collection of the class attributes of the element.</p>
-<p>Using classList is a convenient alternative to accessing an element’s list of classes as a space-delimited string via element.className.</p>
+          
+            <p>开发jquery插件时，只需在此模板中编写功能代码即可^-^</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Created by Jaylen on 16/5/16.</span><br><span class="line"> */</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">$</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> privateFun = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> Plugin = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">Plugin</span>(<span class="params">element, options</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.settings = $.extend(<span class="literal">true</span>, $.fn.Plugin.default, options||&#123;&#125;);</span><br><span class="line">            <span class="keyword">this</span>.element = element;</span><br><span class="line">            <span class="keyword">this</span>.init();</span><br><span class="line">        &#125;</span><br><span class="line">        Plugin.prototype = &#123;</span><br><span class="line">            init: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Plugin;</span><br><span class="line">    &#125;)();</span><br><span class="line">    $.fn.Plugin = <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        </span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    $.fn.Plugin.default = &#123;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;)(jQuery);</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/04/音视频加载过程中触发的事件/" itemprop="url">
+                  音视频加载过程中触发的事件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-04T19:04:09+08:00" content="2016-05-04">
+              2016-05-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/HTML5/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML5</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/HTML5/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/04/音视频加载过程中触发的事件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/04/音视频加载过程中触发的事件/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="在视频-音频-audio-video-加载过程中，事件触发顺序如下："><a href="#在视频-音频-audio-video-加载过程中，事件触发顺序如下：" class="headerlink" title="在视频/音频(audio/video)加载过程中，事件触发顺序如下："></a>在视频/音频(audio/video)加载过程中，事件触发顺序如下：</h4><ol>
+<li><a href="#onloadstart-event">onloadstart (浏览器开始寻找指定视频/音频时触发)</a></li>
+<li><a href="#ondurationchange-event">ondurationchange (视频/音频的时长发生变化时触发)</a></li>
+<li><a href="#onloadedmatadata-event">onloadedmatadata (视频/音频的元数据加载后触发)</a></li>
+<li><a href="#onloadeddata-event">onloadeddata (事件在当前帧的数据加载完成且还没有足够的数据播放视频/音频的下一帧时触发)</a></li>
+<li><a href="#onprogress-event">onprogress (浏览器下载指定音频/视频时触发)</a></li>
+<li><a href="#oncanplay-event">oncanplay (事件在用户可以开始播放音频/视频时触发)</a></li>
+<li><p><a href="#oncanplaythrough-event">oncanplaythrough (当视频可以正常播发且无需停顿时触发)</a></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/27/classList-1/#more" rel="contents">
+            <a class="btn" href="/2016/05/04/音视频加载过程中触发的事件/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -356,8 +489,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/25/DOM对象和jQuery对象的互相转换/" itemprop="url">
-                  DOM对象和jQuery对象的互相转换
+                <a class="post-title-link" href="/2016/04/27/关于-first-child/" itemprop="url">
+                  关于:first-child和:checked选择器
                 </a>
               
             
@@ -370,8 +503,144 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-25T10:44:06+08:00" content="2016-04-25">
-              2016-04-25
+            <time itemprop="dateCreated" datetime="2016-04-27T22:44:30+08:00" content="2016-04-27">
+              2016-04-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/css3/" itemprop="url" rel="index">
+                    <span itemprop="name">css3</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/css3/jQuery/" itemprop="url" rel="index">
+                    <span itemprop="name">jQuery</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/27/关于-first-child/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/27/关于-first-child/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>关于CSS3和jQuery中这个<code>:first-child</code>选择器，之前一直以为是选择匹配元素的第一个子元素，然而今天在jQuery官方文档中看到的解释是这样的</p>
+<blockquote>
+<h2 id="first-child-Selector"><a href="#first-child-Selector" class="headerlink" title=":first-child Selector"></a>:first-child Selector</h2><p>Selects all elements that are the first child of their parent.<br>匹配所有是其父元素第一个子元素的元素</p>
+</blockquote>
+<p>也就是说只要在匹配的元素中某个元素是其父元素的第一个子节点这个元素就会被选择</p>
+<p>而对于<code>:checked</code>选择器，以前也存在误解,认为<code>:checked</code>选择器匹配的是checked的表单元素，让我们来看一下jQuery是怎么说的</p>
+<blockquote>
+<h2 id="checked-Selector"><a href="#checked-Selector" class="headerlink" title=":checked Selector"></a>:checked Selector</h2><p>Matches all elements that are checked or selected.<br>匹配所有checked和selected的元素</p>
+</blockquote>
+<p>也就是说，下拉列表中的被selected的option元素也会被选中</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/04/27/jQuery选择器/" itemprop="url">
+                  jQuery选择器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-27T19:57:23+08:00" content="2016-04-27">
+              2016-04-27
             </time>
           </span>
 
@@ -400,8 +669,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/25/DOM对象和jQuery对象的互相转换/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/25/DOM对象和jQuery对象的互相转换/" itemprop="commentsCount"></span>
+                <a href="/2016/04/27/jQuery选择器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/27/jQuery选择器/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -424,9 +693,11 @@
 
       
         
-          <p><strong>1.由DOM对象生成jQuery对象</strong><br>如果我们把一个HTMLElement对象或一个HTMLElement对象作为数组传递给$函数，就得到了相应的jQuery对象。</p>
+          <blockquote>
+<p>jQuery提供了与CSS 1-3里的选择器一样的选择器给我们使用<br>自己通过官方文档翻译的，语文有点烂，莫介意</p>
+</blockquote>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/25/DOM对象和jQuery对象的互相转换/#more" rel="contents">
+            <a class="btn" href="/2016/04/27/jQuery选择器/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -473,8 +744,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/24/domReady/" itemprop="url">
-                  domReady
+                <a class="post-title-link" href="/2016/04/27/针对具体属性值的CSS便捷方法/" itemprop="url">
+                  jQuery针对具体属性值的CSS便捷方法
                 </a>
               
             
@@ -487,8 +758,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-24T20:41:26+08:00" content="2016-04-24">
-              2016-04-24
+            <time itemprop="dateCreated" datetime="2016-04-27T09:34:35+08:00" content="2016-04-27">
+              2016-04-27
             </time>
           </span>
 
@@ -501,8 +772,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
+                  <a href="/categories/jQuery/" itemprop="url" rel="index">
+                    <span itemprop="name">jQuery</span>
                   </a>
                 </span>
 
@@ -517,104 +788,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/24/domReady/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/24/domReady/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>window.onload需要等待整个页面加载完成再调用js，当页面需要加载容量较大的资源时，会阻塞整个页面的运行，domReady可以通过<code>DOMContentLoaded</code>(HTML5事件)事件或IE下的 <code>document.documentElement.doScroll(&#39;left&#39;)</code>方法判断页面在形成完整dom树后马上调用js,从而增强用户体验</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">domReady</span>(<span class="params">fn</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//对于现代浏览器,对DOMContentLoaded事件处理采用标准的事件绑定方式</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">document</span>.addEventListener)&#123;</span><br><span class="line">    <span class="built_in">document</span>.addEventListener(<span class="string">'DOMContentLoaded'</span>,fn,<span class="literal">false</span>);</span><br><span class="line">  &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    IEcontentLoaded(fn);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//IE模拟DOMContentLoaded</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">IEcontentLoaded</span>(<span class="params">fn</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> d = <span class="built_in">window</span>.document;</span><br><span class="line">    <span class="keyword">var</span> done = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//只执行一次的用户回调函数init()</span></span><br><span class="line">    <span class="keyword">var</span> init = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(!done)&#123;</span><br><span class="line">        done = <span class="literal">true</span>;</span><br><span class="line">        fn();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">try</span>&#123;</span><br><span class="line">        <span class="comment">//DOM树未创建之前调用doSroll会抛出错误</span></span><br><span class="line">        d.documentElement.doScroll(<span class="string">'left'</span>);</span><br><span class="line">      &#125;<span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="comment">//延迟再试一次</span></span><br><span class="line">        setTimeout(<span class="built_in">arguments</span>.callee,<span class="number">50</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">//如果没有错误就表示DOM数创建完毕,然后立马执行用户的回调</span></span><br><span class="line">      init();</span><br><span class="line">    &#125;)();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//监听document的加载状态</span></span><br><span class="line">    d.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="comment">//如果用户在domready之后绑定的函数,就立马执行</span></span><br><span class="line">      <span class="keyword">if</span>(d.readyState === <span class="string">'complete'</span>)&#123;</span><br><span class="line">        d.onreadystatechange = <span class="literal">null</span>;</span><br><span class="line">        init();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/24/pageXOffset和pageYOffset/" itemprop="url">
-                  pageXOffset和pageYOffset
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-24T17:02:53+08:00" content="2016-04-24">
-              2016-04-24
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/24/pageXOffset和pageYOffset/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/24/pageXOffset和pageYOffset/" itemprop="commentsCount"></span>
+                <a href="/2016/04/27/针对具体属性值的CSS便捷方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/27/针对具体属性值的CSS便捷方法/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -639,121 +814,6 @@
         
           
             
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/22/发现新大陆：函数-length/" itemprop="url">
-                  发现新大陆：函数.length
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-22T21:02:29+08:00" content="2016-04-22">
-              2016-04-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/22/发现新大陆：函数-length/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/22/发现新大陆：函数-length/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="函数-length-函数形参个数"><a href="#函数-length-函数形参个数" class="headerlink" title="!!!函数.length = 函数形参个数"></a>!!!函数.length = 函数形参个数</h1><h1 id="函数-length-函数形参个数-1"><a href="#函数-length-函数形参个数-1" class="headerlink" title="!!!函数.length = 函数形参个数"></a>!!!函数.length = 函数形参个数</h1><h1 id="函数-length-函数形参个数-2"><a href="#函数-length-函数形参个数-2" class="headerlink" title="!!!函数.length = 函数形参个数"></a>!!!函数.length = 函数形参个数</h1><p>重要的事情说三遍</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(fn.length); <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(fn1.length); <span class="comment">//1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params">a, b</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(fn2.length);	<span class="comment">//2</span></span><br></pre></td></tr></table></figure>
           
         
       
@@ -781,7 +841,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -822,7 +882,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">41</span>
+              <span class="site-state-item-count">46</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
