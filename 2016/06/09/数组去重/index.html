@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="jaylen, html, css, javascript, 鸡冷" />
 
 
 
@@ -57,16 +57,16 @@
 
 
 
-<meta name="description" content="左偏移量1234567891011function getElementLeft(elemt)&amp;#123;	var actualLeft = element.offsetLeft;	var current = element.offsetParent;		while(current !== null)&amp;#123;		actualLeft += current.offsetLeft;		curren">
+<meta name="description" content="励志成为一名优秀的前端工程师">
 <meta property="og:type" content="article">
-<meta property="og:title" content="获取元素在页面上的偏移量">
-<meta property="og:url" content="http://jaylentse.github.io/2016/04/19/获取元素在页面上的偏移量/index.html">
+<meta property="og:title" content="数组去重">
+<meta property="og:url" content="http://jaylentse.github.io/2016/06/09/数组去重/index.html">
 <meta property="og:site_name" content="小鸡冷前端课堂">
-<meta property="og:description" content="左偏移量1234567891011function getElementLeft(elemt)&amp;#123;	var actualLeft = element.offsetLeft;	var current = element.offsetParent;		while(current !== null)&amp;#123;		actualLeft += current.offsetLeft;		curren">
-<meta property="og:updated_time" content="2016-04-19T09:14:10.000Z">
+<meta property="og:description" content="励志成为一名优秀的前端工程师">
+<meta property="og:updated_time" content="2016-06-09T04:31:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="获取元素在页面上的偏移量">
-<meta name="twitter:description" content="左偏移量1234567891011function getElementLeft(elemt)&amp;#123;	var actualLeft = element.offsetLeft;	var current = element.offsetParent;		while(current !== null)&amp;#123;		actualLeft += current.offsetLeft;		curren">
+<meta name="twitter:title" content="数组去重">
+<meta name="twitter:description" content="励志成为一名优秀的前端工程师">
 
 
 
@@ -84,7 +84,7 @@
   };
 </script>
 
-  <title> 获取元素在页面上的偏移量 | 小鸡冷前端课堂 </title>
+  <title> 数组去重 | 小鸡冷前端课堂 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -224,7 +224,7 @@
             
             
               
-                获取元素在页面上的偏移量
+                数组去重
               
             
           </h1>
@@ -236,38 +236,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-19T15:13:38+08:00" content="2016-04-19">
-              2016-04-19
+            <time itemprop="dateCreated" datetime="2016-06-09T12:31:24+08:00" content="2016-06-09">
+              2016-06-09
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/javscript/" itemprop="url" rel="index">
-                    <span itemprop="name">javscript</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/19/获取元素在页面上的偏移量/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/19/获取元素在页面上的偏移量/" itemprop="commentsCount"></span>
+                <a href="/2016/06/09/数组去重/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/09/数组去重/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -289,8 +270,7 @@
       
 
       
-        <h1 id="左偏移量"><a href="#左偏移量" class="headerlink" title="左偏移量"></a>左偏移量</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getElementLeft</span>(<span class="params">elemt</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> actualLeft = element.offsetLeft;</span><br><span class="line">	<span class="keyword">var</span> current = element.offsetParent;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span>(current !== <span class="literal">null</span>)&#123;</span><br><span class="line">		actualLeft += current.offsetLeft;</span><br><span class="line">		current = current.offsetParent</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> actualLeft;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="上偏移量"><a href="#上偏移量" class="headerlink" title="上偏移量"></a>上偏移量</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getElementTop</span>(<span class="params">elemt</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> actualTop = element.offsetTop;</span><br><span class="line">	<span class="keyword">var</span> current = element.offsetParent;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span>(current !== <span class="literal">null</span>)&#123;</span><br><span class="line">		actualTop += current.offsetTop;</span><br><span class="line">		current = current.offsetParent</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> actualTop;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
       
     </div>
 
@@ -302,27 +282,21 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/javascript/" rel="tag">#javascript</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/16/HTTP报文/" rel="next" title="HTTP报文">
-                <i class="fa fa-chevron-left"></i> HTTP报文
+              <a href="/2016/06/07/给div添加拖动方法/" rel="next" title="给div添加拖动方法">
+                <i class="fa fa-chevron-left"></i> 给div添加拖动方法
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/21/Slection对象/" rel="prev" title="Slection对象">
-                Slection对象 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/06/11/sass-flexbox琴谱loading/" rel="prev" title="sass+flexbox琴谱loading">
+                sass+flexbox琴谱loading <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -349,8 +323,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/19/获取元素在页面上的偏移量/"
-           data-title="获取元素在页面上的偏移量" data-url="http://jaylentse.github.io/2016/04/19/获取元素在页面上的偏移量/">
+      <div class="ds-thread" data-thread-key="2016/06/09/数组去重/"
+           data-title="数组去重" data-url="http://jaylentse.github.io/2016/06/09/数组去重/">
       </div>
     
   </div>
@@ -464,7 +438,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#左偏移量"><span class="nav-number">1.</span> <span class="nav-text">左偏移量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#上偏移量"><span class="nav-number">2.</span> <span class="nav-text">上偏移量</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
